@@ -70,8 +70,8 @@ const About = () => {
               </div>
             </div>
             <div className="card">
-              <div className="p-8 bg-gradient-to-br from-forest-600 to-earth-600 text-white">
-                <h3 className="text-2xl font-bold mb-6">What Sets Us Apart</h3>
+              <div className="p-8 bg-gradient-to-br from-primary-600 to-accent-600 text-white">
+                <h3 className="text-2xl font-black mb-6">What Sets Us Apart</h3>
                 <ul className="space-y-4">
                   <li className="flex items-center">
                     <span className="text-2xl mr-3">✓</span>

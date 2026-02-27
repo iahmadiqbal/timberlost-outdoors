@@ -45,27 +45,33 @@ const Footer = () => {
             <h4 className="text-xl font-black mb-6 text-accent-300">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-primary-200 hover:text-white transition-colors duration-300 flex items-center group">
+                <Link to="/" className="text-primary-200 hover:text-white transition-colors duration-300 flex items-center group cursor-pointer">
                   <span className="mr-2 transform group-hover:translate-x-1 transition-transform">→</span>
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-primary-200 hover:text-white transition-colors duration-300 flex items-center group">
+                <Link to="/about" className="text-primary-200 hover:text-white transition-colors duration-300 flex items-center group cursor-pointer">
                   <span className="mr-2 transform group-hover:translate-x-1 transition-transform">→</span>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-primary-200 hover:text-white transition-colors duration-300 flex items-center group">
+                <Link to="/services" className="text-primary-200 hover:text-white transition-colors duration-300 flex items-center group cursor-pointer">
                   <span className="mr-2 transform group-hover:translate-x-1 transition-transform">→</span>
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-primary-200 hover:text-white transition-colors duration-300 flex items-center group">
+                <Link to="/contact" className="text-primary-200 hover:text-white transition-colors duration-300 flex items-center group cursor-pointer">
                   <span className="mr-2 transform group-hover:translate-x-1 transition-transform">→</span>
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" className="text-primary-200 hover:text-white transition-colors duration-300 flex items-center group cursor-pointer">
+                  <span className="mr-2 transform group-hover:translate-x-1 transition-transform">→</span>
+                  FAQ
                 </Link>
               </li>
             </ul>
