@@ -100,45 +100,55 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu - Simple Sidebar */}
-      <div className={`fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-out z-50 ${
+      {/* Mobile Menu - Modern Redesign */}
+      <div className={`fixed top-0 right-0 h-full w-80 bg-gradient-to-br from-white via-orange-50/30 to-amber-50/50 shadow-2xl transform transition-transform duration-300 ease-out z-50 ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
         {/* Header */}
-        <div className="flex justify-between items-center p-6 border-b-2 border-amber-200">
+        <div className="flex justify-between items-center p-6 border-b-2 border-orange-200 bg-white/80 backdrop-blur-sm">
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg overflow-hidden bg-white p-1">
-              <img src={logo} alt="Timberlost Outdoors" className="w-full h-full object-contain" />
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg overflow-hidden bg-gradient-to-br from-orange-500 to-amber-600 p-0.5">
+              <div className="w-full h-full bg-white rounded-lg p-1">
+                <img src={logo} alt="Timberlost Outdoors" className="w-full h-full object-contain" />
+              </div>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-black">Timberlost</h3>
-              <p className="text-xs text-black font-medium">Outdoors & Surplus</p>
+              <h3 className="text-lg font-bold text-gray-900">Timberlost</h3>
+              <p className="text-xs text-gray-600 font-medium">Outdoors & Surplus</p>
             </div>
           </div>
           <button
             onClick={() => setIsOpen(false)}
-            className="w-10 h-10 bg-amber-100 hover:bg-amber-200 rounded-lg flex items-center justify-center transition-colors"
+            className="w-10 h-10 bg-gradient-to-br from-orange-100 to-amber-100 hover:from-orange-200 hover:to-amber-200 rounded-xl flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-110"
           >
-            <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
         {/* Menu Items */}
-        <div className="px-6 py-6 space-y-2">
-          {navLinks.map((link) => (
+        <div className="px-6 py-8 space-y-3">
+          {navLinks.map((link, index) => (
             <Link
               key={link.path}
               to={link.path}
               onClick={() => setIsOpen(false)}
-              className={`block px-5 py-3 rounded-lg font-medium text-base transition-colors ${
+              className={`block px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300 transform hover:scale-105 ${
                 isActive(link.path)
-                  ? 'bg-white text-black shadow-md border-2 border-amber-300'
-                  : 'text-black hover:bg-amber-50'
+                  ? 'bg-gradient-to-r from-orange-500 to-amber-600 text-white shadow-lg'
+                  : 'bg-white text-gray-900 hover:bg-gradient-to-r hover:from-orange-50 hover:to-amber-50 hover:text-orange-600 shadow-md hover:shadow-lg border-2 border-transparent hover:border-orange-200'
               }`}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {link.name}
+              <div className="flex items-center justify-between">
+                <span>{link.name}</span>
+                {isActive(link.path) && (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                  </svg>
+                )}
+              </div>
             </Link>
           ))}
         </div>
@@ -148,16 +158,23 @@ const Navbar = () => {
           <Link
             to="/contact"
             onClick={() => setIsOpen(false)}
-            className="block px-5 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-lg font-semibold text-center shadow-lg hover:shadow-xl transition-shadow"
+            className="block px-6 py-5 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white rounded-xl font-bold text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
           >
             <div className="flex items-center justify-center space-x-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
               <span>Visit Our Store</span>
             </div>
           </Link>
+        </div>
+
+        {/* Footer Info */}
+        <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-white to-transparent">
+          <p className="text-xs text-center text-gray-600 font-medium">
+            Made with ❤️ for Saskatchewan's outdoor community
+          </p>
         </div>
       </div>
 
