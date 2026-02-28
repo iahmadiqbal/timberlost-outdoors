@@ -40,11 +40,11 @@ const Navbar = () => {
               </div>
             </div>
             <div className="transform group-hover:translate-x-1 transition-transform duration-300">
-              <h1 className="text-xl font-black tracking-tight text-bg">
+              <h1 className="text-xl font-black tracking-tight text-black">
                 Timberlost Outdoors
               </h1>
-              <p className="text-xs font-semibold text-accent">
-                & Surplus
+              <p className="text-xs font-semibold text-secondary">
+                Outdoor Outfitter
               </p>
             </div>
           </Link>
@@ -57,7 +57,7 @@ const Navbar = () => {
                 className={`relative px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 transform hover:scale-105 ${
                   isActive(link.path)
                     ? 'bg-gradient-to-r from-primary to-accent text-white shadow-lg'
-                    : 'text-bg hover:bg-gray-100'
+                    : 'text-black hover:text-primary'
                 } slide-in-right stagger-${index + 1}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -87,7 +87,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg transition-all duration-300 transform hover:scale-110 text-bg hover:bg-gray-100"
+            className="md:hidden p-2 rounded-lg transition-all duration-300 transform hover:scale-110 text-black hover:bg-gray-100"
           >
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isOpen ? (
@@ -135,7 +135,7 @@ const Navbar = () => {
               className={`block px-5 py-3 rounded-lg font-medium text-base transition-colors ${
                 isActive(link.path)
                   ? 'bg-white text-amber-700 shadow-md border-2 border-amber-300'
-                  : 'text-amber-900 hover:bg-amber-50'
+                  : 'text-black hover:bg-amber-50'
               }`}
             >
               {link.name}
