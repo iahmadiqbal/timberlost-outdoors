@@ -42,7 +42,7 @@ const Navbar = () => {
             </div>
             <div className="transform group-hover:translate-x-1 transition-transform duration-300">
               <h1 className="text-xl font-black tracking-tight text-black">
-                Timberlost Outdoors
+                Timberlost Outdoors and Surplus
               </h1>
               <p className="text-xs font-semibold text-secondary">
                 Outdoor Outfitter
