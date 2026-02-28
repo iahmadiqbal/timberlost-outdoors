@@ -276,7 +276,6 @@ p {
   border-radius: 0.75rem;
   font-weight: 500;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 10px 30px -5px rgba(200, 162, 74, 0.5);
   position: relative;
   overflow: hidden;
   text-transform: uppercase;
@@ -300,7 +299,6 @@ p {
 
 .btn-primary:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 20px 40px -5px rgba(200, 162, 74, 0.6);
   background: linear-gradient(135deg, var(--color-primary-hover) 0%, var(--color-accent) 100%);
 }
 
@@ -315,7 +313,6 @@ p {
   border-radius: 0.75rem;
   font-weight: 500;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 10px 30px -5px rgba(93, 107, 47, 0.5);
   position: relative;
   overflow: hidden;
   text-transform: uppercase;
@@ -339,7 +336,6 @@ p {
 
 .btn-secondary:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 20px 40px -5px rgba(93, 107, 47, 0.6);
   background: linear-gradient(135deg, var(--color-secondary-hover) 0%, var(--color-accent) 100%);
 }
 
@@ -552,12 +548,12 @@ a:hover {
 
 /* Link Styles */
 a {
-  color: var(--color-link);
+  color: #000000;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--color-link-hover);
+  color: #C8A24A;
 }
 
 /* Success, Warning, Error States */

@@ -54,16 +54,13 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 transform hover:scale-105 ${
+                className={`relative px-5 py-2.5 rounded-xl text-base transition-all duration-300 ${
                   isActive(link.path)
-                    ? 'bg-gradient-to-r from-primary to-accent text-white shadow-lg'
-                    : 'text-black hover:text-black'
+                    ? 'bg-gradient-to-r from-primary to-accent text-white font-bold'
+                    : 'text-black hover:text-primary font-medium'
                 } slide-in-right stagger-${index + 1}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ animationDelay: `${index * 0.1}s`, fontWeight: isActive(link.path) ? '700' : '500' }}
               >
-                {isActive(link.path) && (
-                  <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary to-accent opacity-20 blur-xl"></span>
-                )}
                 <span className="relative">{link.name}</span>
               </Link>
             ))}
@@ -71,10 +68,9 @@ const Navbar = () => {
             {/* CTA Button */}
             <Link
               to="/contact"
-              className="relative ml-4 px-6 py-2.5 bg-gradient-to-r from-accent to-primary-hover text-white rounded-xl font-black text-sm transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-2xl hover:from-primary hover:to-accent pulse-glow overflow-hidden group slide-in-right stagger-6"
+              className="relative ml-4 px-6 py-2.5 bg-primary text-white rounded-xl font-black text-sm transition-all duration-300 hover:bg-primary-hover overflow-hidden group slide-in-right stagger-6"
               style={{ animationDelay: '0.5s' }}
             >
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent shimmer"></span>
               <span className="relative flex items-center space-x-2">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -158,7 +154,7 @@ const Navbar = () => {
           <Link
             to="/contact"
             onClick={() => setIsOpen(false)}
-            className="block px-6 py-5 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white rounded-xl font-bold text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+            className="block px-6 py-5 bg-primary hover:bg-primary-hover text-white rounded-xl font-bold text-center transition-all duration-300"
           >
             <div className="flex items-center justify-center space-x-2">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
