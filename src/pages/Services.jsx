@@ -6,32 +6,38 @@ const Services = () => {
     {
       icon: '⛺',
       title: 'Camping & Outdoor Gear',
-      description: 'Complete range of camping equipment including tents, sleeping bags, backpacks, cooking gear, and all the essentials for your outdoor adventures. Quality brands at competitive prices.'
+      description: 'Complete range of camping equipment including tents, sleeping bags, backpacks, cooking gear, and all the essentials for your outdoor adventures. Quality brands at competitive prices.',
+      image: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=90&auto=format&fit=crop'
     },
     {
       icon: '🎣',
       title: 'Hunting & Fishing Equipment',
-      description: 'Comprehensive selection of hunting and fishing gear for Saskatchewan sportsmen. From rods and reels to hunting accessories, we have what you need for a successful outing.'
+      description: 'Comprehensive selection of hunting and fishing gear for Saskatchewan sportsmen. From rods and reels to hunting accessories, we have what you need for a successful outing.',
+      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=90&auto=format&fit=crop'
     },
     {
       icon: '❄️',
       title: 'Winter Accessories',
-      description: 'Stay warm and safe during Saskatchewan winters with our selection of winter clothing, boots, gloves, and cold-weather accessories designed for extreme conditions.'
+      description: 'Stay warm and safe during Saskatchewan winters with our selection of winter clothing, boots, gloves, and cold-weather accessories designed for extreme conditions.',
+      image: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&q=90&auto=format&fit=crop'
     },
     {
       icon: '👕',
       title: 'Outdoor Clothing',
-      description: 'Durable, weather-resistant clothing for work and play. From base layers to outerwear, find apparel that stands up to Saskatchewan\'s challenging climate.'
+      description: 'Durable, weather-resistant clothing for work and play. From base layers to outerwear, find apparel that stands up to Saskatchewan\'s challenging climate.',
+      image: 'https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=600&q=90&auto=format&fit=crop'
     },
     {
       icon: '🐾',
       title: 'Pet & Farm Feed',
-      description: 'Quality feed and supplies for your pets and farm animals. We stock a variety of feeds, supplements, and care products to keep your animals healthy and happy.'
+      description: 'Quality feed and supplies for your pets and farm animals. We stock a variety of feeds, supplements, and care products to keep your animals healthy and happy.',
+      image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=600&q=90&auto=format&fit=crop'
     },
     {
       icon: '💧',
       title: 'Ice & Water Sales',
-      description: 'Fresh ice and water available for your daily needs, events, or emergencies. Convenient and affordable solutions for staying hydrated and keeping things cool.'
+      description: 'Fresh ice and water available for your daily needs, events, or emergencies. Convenient and affordable solutions for staying hydrated and keeping things cool.',
+      image: 'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600&q=90&auto=format&fit=crop'
     }
   ];
 

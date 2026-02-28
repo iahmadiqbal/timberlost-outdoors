@@ -1,34 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
+:root {
+  /* Brand */
+  --color-primary: #C8A24A;
+  --color-primary-hover: #B38B2F;
+  --color-primary-soft: #F3E6C4;
+  --color-secondary: #5D6B2F;
+  --color-secondary-hover: #46511F;
+  --color-accent: #A06A2C;
+
+  /* Backgrounds */
+  --color-bg-main: #0B0B0C;
+  --color-bg-alt: #1A120C;
+
+  /* Surfaces */
+  --color-surface: #121214;
+  --color-surface-raised: #1B1B1F;
+
+  /* Borders */
+  --color-border: #2A2A30;
+  --color-border-gold: #3A2D14;
+
+  /* Text */
+  --color-text-primary: #FFFFFF;
+  --color-text-body: #E8E8EA;
+  --color-text-muted: #B7B7BD;
+  --color-text-dim: #8C8C93;
+
+  /* Links */
+  --color-link: #D7B35A;
+  --color-link-hover: #F0CD79;
+
+  /* States */
+  --color-success: #2E7D32;
+  --color-warning: #F59E0B;
+  --color-error: #DC2626;
+}
+
 @theme {
-  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-sans: 'Poppins', system-ui, sans-serif;
   --font-display: 'Poppins', sans-serif;
 
-  /* Modern Professional Color Palette - Deep Blue & Orange */
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
-  --color-primary-950: #172554;
+  /* Timberlost Color Palette for Tailwind */
+  --color-primary-50: #F3E6C4;
+  --color-primary-100: #F0CD79;
+  --color-primary-200: #D7B35A;
+  --color-primary-300: #C8A24A;
+  --color-primary-400: #C8A24A;
+  --color-primary-500: #C8A24A;
+  --color-primary-600: #B38B2F;
+  --color-primary-700: #B38B2F;
+  --color-primary-800: #A06A2C;
+  --color-primary-900: #3A2D14;
+  --color-primary-950: #1A120C;
 
-  --color-accent-50: #fff7ed;
-  --color-accent-100: #ffedd5;
-  --color-accent-200: #fed7aa;
-  --color-accent-300: #fdba74;
-  --color-accent-400: #fb923c;
-  --color-accent-500: #f97316;
-  --color-accent-600: #ea580c;
-  --color-accent-700: #c2410c;
-  --color-accent-800: #9a3412;
-  --color-accent-900: #7c2d12;
-  --color-accent-950: #431407;
+  --color-secondary-50: #F3E6C4;
+  --color-secondary-100: #D7B35A;
+  --color-secondary-200: #C8A24A;
+  --color-secondary-300: #B38B2F;
+  --color-secondary-400: #A06A2C;
+  --color-secondary-500: #5D6B2F;
+  --color-secondary-600: #5D6B2F;
+  --color-secondary-700: #46511F;
+  --color-secondary-800: #3A2D14;
+  --color-secondary-900: #1A120C;
+  --color-secondary-950: #0B0B0C;
+
+  --color-accent-50: #F3E6C4;
+  --color-accent-100: #F0CD79;
+  --color-accent-200: #D7B35A;
+  --color-accent-300: #C8A24A;
+  --color-accent-400: #B38B2F;
+  --color-accent-500: #A06A2C;
+  --color-accent-600: #A06A2C;
+  --color-accent-700: #5D6B2F;
+  --color-accent-800: #46511F;
+  --color-accent-900: #3A2D14;
+  --color-accent-950: #1A120C;
 }
 
 * {
@@ -39,6 +88,11 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FFF8F0;
+  color: #2C1810;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-weight: 400;
 }
 
 h1,
@@ -48,6 +102,16 @@ h4,
 h5,
 h6 {
   font-family: var(--font-display);
+  color: #2C1810;
+  font-weight: 600;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
 }
 
 /* Animated Gradient Background */
@@ -66,7 +130,7 @@ h6 {
 }
 
 .animated-gradient {
-  background: linear-gradient(-45deg, #1e3a8a, #2563eb, #f97316, #ea580c);
+  background: linear-gradient(-45deg, var(--color-bg-alt), var(--color-primary), var(--color-accent), var(--color-secondary));
   background-size: 400% 400%;
   animation: gradient-shift 15s ease infinite;
 }
@@ -176,11 +240,11 @@ h6 {
 
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 0 20px rgba(200, 162, 74, 0.4);
   }
 
   50% {
-    box-shadow: 0 0 40px rgba(249, 115, 22, 0.6);
+    box-shadow: 0 0 40px rgba(160, 106, 44, 0.6);
   }
 }
 
@@ -207,13 +271,13 @@ h6 {
 
 /* Button Styles with Animations */
 .btn-primary {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-  color: white;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+  color: #FFFFFF;
   padding: 0.875rem 2rem;
   border-radius: 0.75rem;
-  font-weight: 700;
+  font-weight: 500;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.5);
+  box-shadow: 0 10px 30px -5px rgba(200, 162, 74, 0.5);
   position: relative;
   overflow: hidden;
   text-transform: uppercase;
@@ -237,8 +301,8 @@ h6 {
 
 .btn-primary:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 20px 40px -5px rgba(37, 99, 235, 0.6);
-  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  box-shadow: 0 20px 40px -5px rgba(200, 162, 74, 0.6);
+  background: linear-gradient(135deg, var(--color-primary-hover) 0%, var(--color-accent) 100%);
 }
 
 .btn-primary:active {
@@ -246,13 +310,13 @@ h6 {
 }
 
 .btn-secondary {
-  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-  color: white;
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-hover) 100%);
+  color: var(--color-text-primary);
   padding: 0.875rem 2rem;
   border-radius: 0.75rem;
-  font-weight: 700;
+  font-weight: 500;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 10px 30px -5px rgba(249, 115, 22, 0.5);
+  box-shadow: 0 10px 30px -5px rgba(93, 107, 47, 0.5);
   position: relative;
   overflow: hidden;
   text-transform: uppercase;
@@ -276,8 +340,8 @@ h6 {
 
 .btn-secondary:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 20px 40px -5px rgba(249, 115, 22, 0.6);
-  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+  box-shadow: 0 20px 40px -5px rgba(93, 107, 47, 0.6);
+  background: linear-gradient(135deg, var(--color-secondary-hover) 0%, var(--color-accent) 100%);
 }
 
 .btn-secondary:active {
@@ -286,13 +350,13 @@ h6 {
 
 /* Card Styles with 3D Effect */
 .card {
-  background: white;
+  background: #FFFFFF;
   border-radius: 1.25rem;
-  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 40px -10px rgba(200, 162, 74, 0.25);
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   position: relative;
-  border: 1px solid rgba(37, 99, 235, 0.1);
+  border: 2px solid #E8D5B7;
 }
 
 .card::before {
@@ -302,7 +366,7 @@ h6 {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #2563eb, #f97316);
+  background: linear-gradient(90deg, #C8A24A, #A06A2C);
   transform: scaleX(0);
   transition: transform 0.5s ease;
 }
@@ -313,17 +377,17 @@ h6 {
 
 .card:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 30px 60px -15px rgba(37, 99, 235, 0.3);
-  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: 0 30px 60px -15px rgba(200, 162, 74, 0.35);
+  border-color: #C8A24A;
 }
 
 /* Gradient Text */
 .gradient-text {
-  background: linear-gradient(135deg, #2563eb 0%, #f97316 100%);
+  background: linear-gradient(135deg, #C8A24A 0%, #A06A2C 50%, #B38B2F 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 /* Glowing Border Effect */
@@ -331,13 +395,13 @@ h6 {
 
   0%,
   100% {
-    border-color: rgba(37, 99, 235, 0.5);
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+    border-color: rgba(200, 162, 74, 0.5);
+    box-shadow: 0 0 20px rgba(200, 162, 74, 0.3);
   }
 
   50% {
-    border-color: rgba(249, 115, 22, 0.5);
-    box-shadow: 0 0 30px rgba(249, 115, 22, 0.4);
+    border-color: rgba(160, 106, 44, 0.5);
+    box-shadow: 0 0 30px rgba(160, 106, 44, 0.4);
   }
 }
 
@@ -423,15 +487,107 @@ h6 {
 /* Neon Glow Text */
 .neon-text {
   text-shadow:
-    0 0 10px rgba(37, 99, 235, 0.8),
-    0 0 20px rgba(37, 99, 235, 0.6),
-    0 0 30px rgba(249, 115, 22, 0.4);
+    0 0 10px rgba(200, 162, 74, 0.8),
+    0 0 20px rgba(200, 162, 74, 0.6),
+    0 0 30px rgba(160, 106, 44, 0.4);
 }
 
 /* Glass Morphism Effect */
 .glass {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(18, 18, 20, 0.8);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(200, 162, 74, 0.2);
+}
+
+/* Hero Gradient */
+.hero-gradient {
+  background: linear-gradient(180deg, #F0CD79 0%, #C8A24A 45%, #B38B2F 100%);
+}
+
+/* Dark Hero Overlay */
+.hero-overlay {
+  background: linear-gradient(180deg, rgba(11, 11, 12, .35) 0%, rgba(11, 11, 12, .85) 65%, #0B0B0C 100%);
+}
+
+/* Link Styles */
+a {
+  color: #D7B35A;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #F0CD79;
+}
+
+/* Success, Warning, Error States */
+.success {
+  color: #2E7D32;
+}
+
+.warning {
+  color: #F59E0B;
+}
+
+.error {
+  color: #DC2626;
+}
+
+/* Glass Morphism Effect */
+.glass {
+  background: rgba(18, 18, 20, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(200, 162, 74, 0.2);
+}
+
+/* Hero Gradient */
+.hero-gradient {
+  background: linear-gradient(180deg, var(--color-link-hover) 0%, var(--color-primary) 45%, var(--color-primary-hover) 100%);
+}
+
+/* Dark Hero Overlay */
+.hero-overlay {
+  background: linear-gradient(180deg, rgba(11, 11, 12, .35) 0%, rgba(11, 11, 12, .85) 65%, var(--color-bg-main) 100%);
+}
+
+/* Link Styles */
+a {
+  color: var(--color-link);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+/* Success, Warning, Error States */
+.success {
+  color: var(--color-success);
+}
+
+.warning {
+  color: var(--color-warning);
+}
+
+.error {
+  color: var(--color-error);
+}
+
+/* Gradient Animation */
+@keyframes gradient-x {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
 }
