@@ -4,7 +4,7 @@ const About = () => {
       {/* Hero Section with Background Image */}
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/50 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/50 to-black/70 z-10"></div>
           <img 
             src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1920" 
             alt="Mountain landscape" 
@@ -17,7 +17,7 @@ const About = () => {
             <div className="inline-block mb-6 px-6 py-2 bg-white/90 backdrop-blur-md rounded-full border-2 border-amber-600 shadow-xl">
               <span className="text-sm font-semibold tracking-wider text-amber-700 uppercase">About Us</span>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 text-white drop-shadow-2xl">Our Story</h1>
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 bg-clip-text text-transparent drop-shadow-2xl">Our Story</h1>
             <p className="text-2xl text-white drop-shadow-lg max-w-3xl mx-auto font-medium">Serving Saskatchewan's outdoor community since day one</p>
           </div>
         </div>
@@ -26,7 +26,7 @@ const About = () => {
       {/* Company Story with Image */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/40 to-black/60 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/75 z-10"></div>
           <img 
             src="https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg?auto=compress&cs=tinysrgb&w=1920" 
             alt="Our story background" 
@@ -40,8 +40,8 @@ const About = () => {
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-5xl font-semibold text-white drop-shadow-2xl mb-8">Our Story</h2>
-              <div className="space-y-6 text-white drop-shadow-lg text-lg leading-relaxed font-normal">
+              <h2 className="text-5xl font-semibold bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 bg-clip-text text-transparent drop-shadow-2xl mb-8">Our Story</h2>
+              <div className="space-y-6 text-white drop-shadow-xl text-lg leading-relaxed font-normal">
                 <p>
                   Timberlost Outdoors & Surplus is your trusted partner for all outdoor adventures and daily necessities in Saskatchewan. We understand the unique needs of our community, from weekend campers to serious hunters, from pet owners to farmers.
                 </p>
@@ -52,7 +52,7 @@ const About = () => {
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-amber-300/30 to-orange-300/30 rounded-3xl blur-2xl"></div>
-              <div className="relative bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl border-4 border-amber-500 p-8">
+              <div className="relative rounded-3xl shadow-2xl overflow-hidden">
                 <img 
                   src="https://images.pexels.com/photos/699558/pexels-photo-699558.jpeg?auto=compress&cs=tinysrgb&w=800" 
                   alt="Camping gear" 

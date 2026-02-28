@@ -57,7 +57,7 @@ const Navbar = () => {
                 className={`relative px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 transform hover:scale-105 ${
                   isActive(link.path)
                     ? 'bg-gradient-to-r from-primary to-accent text-white shadow-lg'
-                    : 'text-black hover:text-primary'
+                    : 'text-black hover:text-black'
                 } slide-in-right stagger-${index + 1}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -111,15 +111,15 @@ const Navbar = () => {
               <img src={logo} alt="Timberlost Outdoors" className="w-full h-full object-contain" />
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-amber-900">Timberlost</h3>
-              <p className="text-xs text-amber-600 font-medium">Outdoors & Surplus</p>
+              <h3 className="text-lg font-semibold text-black">Timberlost</h3>
+              <p className="text-xs text-black font-medium">Outdoors & Surplus</p>
             </div>
           </div>
           <button
             onClick={() => setIsOpen(false)}
             className="w-10 h-10 bg-amber-100 hover:bg-amber-200 rounded-lg flex items-center justify-center transition-colors"
           >
-            <svg className="w-6 h-6 text-amber-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -134,7 +134,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className={`block px-5 py-3 rounded-lg font-medium text-base transition-colors ${
                 isActive(link.path)
-                  ? 'bg-white text-amber-700 shadow-md border-2 border-amber-300'
+                  ? 'bg-white text-black shadow-md border-2 border-amber-300'
                   : 'text-black hover:bg-amber-50'
               }`}
             >
