@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import TestimonialCard from '../components/TestimonialCard';
-import { FaCheckCircle, FaTag, FaUsers, FaDirections } from 'react-icons/fa';
+import { FaCheckCircle, FaTag, FaUsers, FaDirections, FaShoppingBag, FaMapMarkedAlt, FaCampground, FaDollarSign, FaUserFriends } from 'react-icons/fa';
 
 const Home = () => {
   const services = [
@@ -67,10 +67,10 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image - Pixel Perfect from Pexels - Full Width 1920px */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/65 to-black/80 z-10"></div>
           <img 
-            src="https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg?auto=compress&cs=tinysrgb&w=1920" 
-            alt="Camping tent in forest" 
+            src="https://images.pexels.com/photos/1884584/pexels-photo-1884584.jpeg?auto=compress&cs=tinysrgb&w=1920" 
+            alt="Outdoor gear and equipment store" 
             className="w-full h-full object-cover"
             loading="eager"
           />
@@ -82,39 +82,34 @@ const Home = () => {
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-300/20 rounded-full blur-3xl float-animation" style={{ animationDelay: '2s' }}></div>
         </div>
         
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-30 py-32 w-full">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-30 py-16 w-full">
           <div className="text-center">
             {/* Badge */}
-            <div className="inline-block mb-8 px-8 py-3 bg-white/90 backdrop-blur-xl rounded-full border-2 border-white shadow-2xl fade-in-up">
-              <span className="text-sm font-semibold tracking-widest text-amber-700 uppercase">🏔️ Saskatchewan's Premier Outdoor Store</span>
+            <div className="inline-block mb-6 px-10 py-4 bg-white/95 backdrop-blur-xl rounded-full border-2 border-amber-500 shadow-2xl fade-in-up">
+              <span className="text-base font-bold tracking-wider text-amber-700 uppercase">🏔️ Saskatchewan's Premier Outdoor Store</span>
             </div>
             
             {/* Main Heading */}
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight fade-in-up stagger-1">
-              <span className="block text-white drop-shadow-2xl">Your Complete</span>
-              <span className="block mt-4 text-white drop-shadow-2xl">
+              <span className="block !text-white drop-shadow-2xl">Your Complete</span>
+              <span className="block mt-4 !text-white drop-shadow-2xl">
                 Outdoor Outfitter
               </span>
             </h1>
             
             {/* Subheading */}
-            <p className="text-xl md:text-2xl lg:text-3xl text-white drop-shadow-lg mb-12 max-w-4xl mx-auto font-medium leading-relaxed fade-in-up stagger-2">
+            <p className="text-xl md:text-2xl lg:text-3xl !text-white drop-shadow-lg mb-12 max-w-4xl mx-auto font-medium leading-relaxed fade-in-up stagger-2">
               Quality camping gear, hunting & fishing equipment, winter accessories, and farm supplies at competitive prices
             </p>
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in-up stagger-3 mb-16">
-              <Link to="/services" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-110 shadow-2xl hover:shadow-amber-500/50 border-2 border-white">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+              <Link to="/services" className="inline-flex items-center gap-3 px-8 py-4 bg-white/95 backdrop-blur-sm text-amber-700 rounded-xl font-semibold text-lg transition-all duration-500 transform hover:-translate-y-2 border-2 border-amber-500 float-animation hover:bg-amber-50">
+                <FaShoppingBag className="text-xl text-amber-700" />
                 <span>Explore Our Services</span>
               </Link>
-              <Link to="/contact" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-110 shadow-2xl hover:shadow-orange-500/50 border-2 border-white">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+              <Link to="/contact" className="inline-flex items-center gap-3 px-8 py-4 bg-white/95 backdrop-blur-sm text-amber-700 rounded-xl font-semibold text-lg transition-all duration-500 transform hover:-translate-y-2 border-2 border-amber-500 float-animation hover:bg-amber-50">
+                <FaMapMarkedAlt className="text-xl text-amber-700" />
                 <span>Visit Our Store</span>
               </Link>
             </div>
@@ -122,17 +117,17 @@ const Home = () => {
             {/* Features Quick View */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16 fade-in-up stagger-4">
               <div className="bg-white/90 backdrop-blur-xl rounded-2xl p-6 border-2 border-white hover:border-amber-500 transition-all duration-300 hover:scale-105 shadow-xl">
-                <div className="text-4xl mb-3">⛺</div>
+                <div className="text-4xl mb-3 text-amber-700"><FaCampground /></div>
                 <h3 className="text-lg font-semibold text-amber-900 mb-2">Premium Gear</h3>
                 <p className="text-sm text-amber-700 font-normal">Top quality outdoor equipment</p>
               </div>
               <div className="bg-white/90 backdrop-blur-xl rounded-2xl p-6 border-2 border-white hover:border-amber-500 transition-all duration-300 hover:scale-105 shadow-xl">
-                <div className="text-4xl mb-3">💰</div>
+                <div className="text-4xl mb-3 text-amber-700"><FaDollarSign /></div>
                 <h3 className="text-lg font-semibold text-amber-900 mb-2">Best Prices</h3>
                 <p className="text-sm text-amber-700 font-normal">Competitive rates guaranteed</p>
               </div>
               <div className="bg-white/90 backdrop-blur-xl rounded-2xl p-6 border-2 border-white hover:border-amber-500 transition-all duration-300 hover:scale-105 shadow-xl">
-                <div className="text-4xl mb-3">🤝</div>
+                <div className="text-4xl mb-3 text-amber-700"><FaUserFriends /></div>
                 <h3 className="text-lg font-semibold text-amber-900 mb-2">Expert Staff</h3>
                 <p className="text-sm text-amber-700 font-normal">Knowledgeable & friendly</p>
               </div>
