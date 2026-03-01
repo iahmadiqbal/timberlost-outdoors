@@ -39,7 +39,7 @@
 }
 
 @theme {
-  --font-sans: 'Poppins', system-ui, sans-serif;
+  --font-sans: 'Poppins', sans-serif;
   --font-display: 'Poppins', sans-serif;
 
   /* Timberlost Color Palette for Tailwind */

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FaMapMarkerAlt, FaPhone, FaClock, FaFacebook, FaEnvelope, FaPaperPlane } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -24,81 +25,102 @@ const Contact = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary-700 to-accent-700 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl text-forest-100">Visit our store or get in touch with us</p>
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/65 to-black/80 z-10"></div>
+          <img 
+            src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920" 
+            alt="Contact us" 
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+        </div>
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+          <div className="text-center">
+            <div className="inline-block mb-6 px-10 py-4 bg-white/95 backdrop-blur-md rounded-full border-2 border-amber-500 shadow-xl animate-bounce">
+              <span className="text-base font-bold tracking-wider text-amber-700 uppercase">Contact Us</span>
+            </div>
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 !text-white drop-shadow-2xl">Get In Touch</h1>
+            <p className="text-2xl md:text-3xl !text-white drop-shadow-lg max-w-3xl mx-auto font-medium">Visit our store or send us a message</p>
+          </div>
         </div>
       </section>
 
       {/* Contact Info & Form */}
-      <section className="py-12 bg-gradient-to-br from-gray-50 to-primary-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-b from-amber-50 to-white">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold gradient-text mb-8">Get In Touch</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-amber-900 mb-8">Contact Information</h2>
               
               <div className="space-y-6">
-                <div className="card">
-                  <div className="p-6 flex items-start">
-                    <div className="w-12 h-12 bg-gradient-to-br from-forest-500 to-forest-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
+                <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-amber-200 hover:border-amber-500 transition-all duration-300 hover:-translate-y-1 group">
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                      <FaMapMarkerAlt className="text-xl text-amber-500" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-800 mb-2">Location</h3>
-                      <p className="text-gray-600">Saskatchewan, Canada</p>
-                      <p className="text-sm text-gray-500 mt-2">Visit us in store for exact location and hours</p>
+                      <h3 className="font-bold text-amber-900 mb-2 text-lg">Location</h3>
+                      <p className="text-gray-700 font-medium text-sm">105 Main St, Big River</p>
+                      <p className="text-gray-700 font-medium text-sm">SK S0J 0E0, Canada</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="card">
-                  <div className="p-6 flex items-start">
-                    <div className="w-12 h-12 bg-gradient-to-br from-earth-500 to-earth-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
+                <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-amber-200 hover:border-amber-500 transition-all duration-300 hover:-translate-y-1 group">
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                      <FaPhone className="text-xl text-amber-500" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-800 mb-2">Phone</h3>
-                      <p className="text-gray-600">Available in store</p>
-                      <p className="text-sm text-gray-500 mt-2">Call us for product inquiries and availability</p>
+                      <h3 className="font-bold text-amber-900 mb-2 text-lg">Phone</h3>
+                      <a href="tel:+13064692437" className="text-gray-700 hover:text-amber-700 font-medium text-base transition-colors">
+                        +1 306-469-2437
+                      </a>
+                      <p className="text-xs text-gray-600 mt-1">Call us for product inquiries</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="card">
-                  <div className="p-6 flex items-start">
-                    <div className="w-12 h-12 bg-gradient-to-br from-forest-600 to-earth-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
+                <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-amber-200 hover:border-amber-500 transition-all duration-300 hover:-translate-y-1 group">
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                      <FaEnvelope className="text-xl text-amber-500" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-800 mb-2">Store Hours</h3>
-                      <p className="text-gray-600">Visit us for current hours</p>
-                      <p className="text-sm text-gray-500 mt-2">We're here to serve you</p>
+                      <h3 className="font-bold text-amber-900 mb-2 text-lg">Email</h3>
+                      <a href="mailto:info@timberlostoutdoorsandsurplus.com" className="text-gray-700 hover:text-amber-700 font-medium text-sm transition-colors break-all">
+                        info@timberlostoutdoorsandsurplus.com
+                      </a>
                     </div>
                   </div>
                 </div>
 
-                <div className="card">
-                  <div className="p-6 flex items-start">
-                    <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                      </svg>
+                <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-amber-200 hover:border-amber-500 transition-all duration-300 hover:-translate-y-1 group">
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                      <FaClock className="text-xl text-amber-500" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-800 mb-2">Social Media</h3>
-                      <a href="https://www.facebook.com/TimberlostOutdoors/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 font-medium">
+                      <h3 className="font-bold text-amber-900 mb-2 text-lg">Store Hours</h3>
+                      <p className="text-gray-700 font-medium text-sm">Visit us for current hours</p>
+                      <p className="text-xs text-gray-600 mt-1">We're here to serve you</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-amber-200 hover:border-amber-500 transition-all duration-300 hover:-translate-y-1 group">
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                      <FaFacebook className="text-xl text-amber-500" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-amber-900 mb-2 text-lg">Social Media</h3>
+                      <a href="https://www.facebook.com/TimberlostOutdoors/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-amber-700 font-medium text-sm transition-colors">
                         Follow us on Facebook
                       </a>
-                      <p className="text-sm text-gray-500 mt-2">Stay updated with our latest products and offers</p>
+                      <p className="text-xs text-gray-600 mt-1">Stay updated with latest products</p>
                     </div>
                   </div>
                 </div>
@@ -107,12 +129,12 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div>
-              <div className="card">
+              <div className="bg-white rounded-3xl shadow-2xl border-4 border-amber-500 overflow-hidden">
                 <div className="p-8">
-                  <h2 className="text-3xl font-bold gradient-text mb-6">Send Us a Message</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold text-amber-900 mb-6">Send Us a Message</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label htmlFor="name" className="block text-sm font-bold text-amber-900 mb-2">
                         Name *
                       </label>
                       <input
@@ -122,13 +144,13 @@ const Contact = () => {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-forest-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 border-2 border-amber-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all"
                         placeholder="Your name"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label htmlFor="email" className="block text-sm font-bold text-amber-900 mb-2">
                         Email *
                       </label>
                       <input
@@ -138,13 +160,13 @@ const Contact = () => {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-forest-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 border-2 border-amber-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all"
                         placeholder="your.email@example.com"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label htmlFor="phone" className="block text-sm font-bold text-amber-900 mb-2">
                         Phone
                       </label>
                       <input
@@ -153,13 +175,13 @@ const Contact = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-forest-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 border-2 border-amber-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all"
                         placeholder="(123) 456-7890"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label htmlFor="message" className="block text-sm font-bold text-amber-900 mb-2">
                         Message *
                       </label>
                       <textarea
@@ -169,12 +191,13 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         rows="5"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-forest-500 focus:border-transparent transition-all resize-none"
+                        className="w-full px-4 py-3 border-2 border-amber-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all resize-none"
                         placeholder="How can we help you?"
                       ></textarea>
                     </div>
 
-                    <button type="submit" className="btn-primary w-full">
+                    <button type="submit" className="w-full inline-flex items-center justify-center gap-3 bg-white text-amber-700 px-8 py-4 rounded-xl font-medium text-lg hover:-translate-y-2 transition-all duration-500 border-2 border-amber-500 shadow-lg hover:shadow-2xl hover:bg-amber-50">
+                      <FaPaperPlane className="text-xl" />
                       Send Message
                     </button>
                   </form>
@@ -186,24 +209,29 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold gradient-text mb-8 text-center">Find Us</h2>
-          <div className="card overflow-hidden">
-            <div className="bg-gradient-to-br from-forest-100 to-earth-100 h-96 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-forest-500 to-earth-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">Visit Our Store</h3>
-                <p className="text-gray-600">Saskatchewan, Canada</p>
-                <p className="text-sm text-gray-500 mt-4">Contact us for directions and exact location</p>
-              </div>
+      <section className="py-20 bg-white">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-block mb-6 px-10 py-4 bg-white rounded-full border-2 border-amber-500 shadow-lg hover:scale-110 hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <span className="text-base font-bold text-amber-700 uppercase tracking-wider">Find Us</span>
             </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-6">Visit Our Store</h2>
           </div>
+          <a 
+            href="https://www.facebook.com/TimberlostOutdoors/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl shadow-xl border-2 border-amber-500 overflow-hidden py-12 px-6 hover:scale-105 transition-transform duration-500 cursor-pointer"
+          >
+            <div className="text-center">
+              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-3 animate-bounce">
+                <FaMapMarkerAlt className="text-2xl text-amber-500" />
+              </div>
+              <h3 className="text-lg font-bold text-amber-900 mb-1">105 Main St, Big River</h3>
+              <p className="text-base text-gray-700 font-medium">SK S0J 0E0, Canada</p>
+              <p className="text-sm text-gray-600 mt-2">Click for more information</p>
+            </div>
+          </a>
         </div>
       </section>
     </div>

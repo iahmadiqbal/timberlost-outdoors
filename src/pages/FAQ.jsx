@@ -1,28 +1,24 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaQuestionCircle, FaCheckCircle, FaUsers, FaDollarSign, FaLightbulb, FaChevronDown, FaPhone } from 'react-icons/fa';
 
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="card mb-4">
+    <div className="bg-white rounded-2xl shadow-lg mb-4 border-2 border-amber-200 hover:border-amber-500 transition-all duration-300 hover:shadow-xl">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+        className="w-full p-6 text-left flex justify-between items-center hover:bg-amber-50 transition-colors rounded-2xl"
       >
-        <h3 className="text-lg font-semibold text-gray-800 pr-4">{question}</h3>
-        <svg
-          className={`w-6 h-6 text-forest-600 flex-shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
+        <h3 className="text-lg font-semibold text-amber-900 pr-4">{question}</h3>
+        <FaChevronDown
+          className={`w-6 h-6 text-amber-600 flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+        />
       </button>
       {isOpen && (
         <div className="px-6 pb-6">
-          <p className="text-gray-600 leading-relaxed">{answer}</p>
+          <p className="text-gray-700 leading-relaxed">{answer}</p>
         </div>
       )}
     </div>
@@ -68,19 +64,36 @@ const FAQ = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary-700 to-accent-700 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold mb-4">Frequently Asked Questions</h1>
-          <p className="text-xl text-forest-100">Find answers to common questions about our products and services</p>
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/65 to-black/80 z-10"></div>
+          <img 
+            src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1920" 
+            alt="Customer service and FAQ" 
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+        </div>
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+          <div className="text-center">
+            <div className="inline-block mb-6 px-10 py-4 bg-white/95 backdrop-blur-md rounded-full border-2 border-amber-500 shadow-xl animate-bounce">
+              <span className="text-base font-bold tracking-wider text-amber-700 uppercase">FAQ</span>
+            </div>
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 !text-white drop-shadow-2xl">Frequently Asked Questions</h1>
+            <p className="text-2xl md:text-3xl !text-white drop-shadow-lg max-w-3xl mx-auto font-medium">Find answers to common questions about our products and services</p>
+          </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-12 bg-gradient-to-br from-gray-50 to-primary-50">
+      <section className="py-20 bg-gradient-to-b from-amber-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold gradient-text mb-4">Got Questions?</h2>
-            <p className="text-xl text-gray-600">We've got answers! Browse our most frequently asked questions below.</p>
+            <div className="inline-block mb-6 px-10 py-4 bg-white rounded-full border-2 border-amber-500 shadow-lg hover:scale-110 hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <span className="text-base font-bold text-amber-700 uppercase tracking-wider">Got Questions?</span>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-bold text-amber-900 mb-6">We've Got Answers</h2>
+            <p className="text-xl text-gray-700">Browse our most frequently asked questions below</p>
           </div>
 
           <div>
@@ -92,79 +105,86 @@ const FAQ = () => {
       </section>
 
       {/* Policies Section */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold gradient-text mb-12 text-center">Our Policies</h2>
+      <section className="py-20 bg-white">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-block mb-6 px-10 py-4 bg-white rounded-full border-2 border-amber-500 shadow-lg hover:scale-110 hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <span className="text-base font-bold text-amber-700 uppercase tracking-wider">Our Policies</span>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-bold text-amber-900 mb-6">Our Commitment to You</h2>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="card">
-              <div className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-forest-500 to-forest-600 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+            <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-amber-200 hover:border-amber-500 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-black rounded-xl flex items-center justify-center flex-shrink-0">
+                  <FaCheckCircle className="text-3xl text-amber-500" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Quality Guarantee</h3>
-                <p className="text-gray-600">
-                  We stand behind the quality of our products. Every item in our store is carefully selected from trusted manufacturers to ensure durability and performance.
-                </p>
+                <h3 className="text-2xl font-bold text-amber-900">Quality Guarantee</h3>
               </div>
+              <p className="text-gray-700 leading-relaxed">
+                We stand behind the quality of our products. Every item in our store is carefully selected from trusted manufacturers to ensure durability and performance.
+              </p>
             </div>
 
-            <div className="card">
-              <div className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-earth-500 to-earth-600 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
+            <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-amber-200 hover:border-amber-500 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-black rounded-xl flex items-center justify-center flex-shrink-0">
+                  <FaUsers className="text-3xl text-amber-500" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Customer Service</h3>
-                <p className="text-gray-600">
-                  Your satisfaction is our priority. Our friendly staff is always ready to help you find the right products and answer any questions you may have.
-                </p>
+                <h3 className="text-2xl font-bold text-amber-900">Customer Service</h3>
               </div>
+              <p className="text-gray-700 leading-relaxed">
+                Your satisfaction is our priority. Our friendly staff is always ready to help you find the right products and answer any questions you may have.
+              </p>
             </div>
 
-            <div className="card">
-              <div className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-forest-600 to-earth-500 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+            <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-amber-200 hover:border-amber-500 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-black rounded-xl flex items-center justify-center flex-shrink-0">
+                  <FaDollarSign className="text-3xl text-amber-500" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Fair Pricing</h3>
-                <p className="text-gray-600">
-                  We offer competitive prices on all our products. Quality outdoor gear and farm supplies shouldn't break the bank, and we work hard to provide great value.
-                </p>
+                <h3 className="text-2xl font-bold text-amber-900">Fair Pricing</h3>
               </div>
+              <p className="text-gray-700 leading-relaxed">
+                We offer competitive prices on all our products. Quality outdoor gear and farm supplies shouldn't break the bank, and we work hard to provide great value.
+              </p>
             </div>
 
-            <div className="card">
-              <div className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+            <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-amber-200 hover:border-amber-500 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-black rounded-xl flex items-center justify-center flex-shrink-0">
+                  <FaLightbulb className="text-3xl text-amber-500" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Expert Advice</h3>
-                <p className="text-gray-600">
-                  Our knowledgeable staff understands Saskatchewan's unique outdoor conditions and can provide expert recommendations for your specific needs.
-                </p>
+                <h3 className="text-2xl font-bold text-amber-900">Expert Advice</h3>
               </div>
+              <p className="text-gray-700 leading-relaxed">
+                Our knowledgeable staff understands Saskatchewan's unique outdoor conditions and can provide expert recommendations for your specific needs.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Still Have Questions */}
-      <section className="py-12 bg-gradient-to-r from-primary-700 to-accent-700 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-4">Still Have Questions?</h2>
-          <p className="text-xl mb-8 text-white/90">
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/65 to-black/80 z-10"></div>
+          <img 
+            src="https://images.pexels.com/photos/4393426/pexels-photo-4393426.jpeg?auto=compress&cs=tinysrgb&w=1920" 
+            alt="Contact us for help" 
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 !text-white drop-shadow-2xl">Still Have Questions?</h2>
+          <p className="text-2xl mb-8 !text-white drop-shadow-lg font-medium">
             We're here to help! Contact us or visit our store and our friendly staff will be happy to assist you.
           </p>
-          <Link to="/contact" className="inline-block bg-white text-primary-900 px-10 py-5 rounded-2xl font-black text-xl hover:bg-accent-50 transition-all duration-300 shadow-2xl hover:shadow-accent-500/50 hover:scale-110 transform">
-            📞 Contact Us Now
+          <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-amber-700 px-8 py-4 rounded-xl font-semibold text-lg hover:-translate-y-2 transition-all duration-500 ease-in-out hover:bg-amber-50 border-2 border-amber-500 shadow-xl hover:shadow-2xl">
+            <FaPhone className="text-xl" />
+            Contact Us Now
           </Link>
         </div>
       </section>
