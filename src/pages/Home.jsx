@@ -1,44 +1,45 @@
 import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import TestimonialCard from '../components/TestimonialCard';
+import { FaCheckCircle, FaTag, FaUsers } from 'react-icons/fa';
 
 const Home = () => {
   const services = [
     {
       icon: '⛺',
-      title: 'Camping & Outdoor Gear',
+      title: 'Outdoor & Camping Gear',
       description: 'Complete range of camping equipment and outdoor gear for all your adventures.',
-      image: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=90&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=1920&q=90&auto=format&fit=crop'
     },
     {
       icon: '🎣',
-      title: 'Hunting & Fishing',
+      title: 'Hunting & Fishing Equipment',
       description: 'Quality hunting and fishing equipment for Saskatchewan outdoor enthusiasts.',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=90&auto=format&fit=crop'
-    },
-    {
-      icon: '❄️',
-      title: 'Winter Accessories',
-      description: 'Stay warm with our selection of winter gear and accessories.',
-      image: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&q=90&auto=format&fit=crop'
-    },
-    {
-      icon: '🐾',
-      title: 'Pet & Farm Feed',
-      description: 'Quality feed and supplies for your pets and farm animals.',
-      image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=600&q=90&auto=format&fit=crop'
-    },
-    {
-      icon: '💧',
-      title: 'Ice & Water Sales',
-      description: 'Fresh ice and water available for your daily needs.',
-      image: 'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600&q=90&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&q=90&auto=format&fit=crop'
     },
     {
       icon: '👕',
-      title: 'Outdoor Clothing',
+      title: 'Outdoor Clothing & Apparel',
       description: 'Durable clothing designed for outdoor activities and work.',
-      image: 'https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=600&q=90&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=1920&q=90&auto=format&fit=crop'
+    },
+    {
+      icon: '💧',
+      title: 'Food, Water, & Ice Supplies',
+      description: 'Fresh ice and water available for your daily needs.',
+      image: 'https://images.unsplash.com/photo-1523362628745-0c100150b504?w=1920&q=90&auto=format&fit=crop'
+    },
+    {
+      icon: '🐾',
+      title: 'Pet & Farm Feed Supplies',
+      description: 'Quality feed and supplies for your pets and farm animals.',
+      image: 'https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=1920&q=90&auto=format&fit=crop'
+    },
+    {
+      icon: '🤝',
+      title: 'Helpful Onsite Service & Recommendations',
+      description: 'Expert advice to help you find the right equipment.',
+      image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&q=90&auto=format&fit=crop'
     }
   ];
 
@@ -162,7 +163,12 @@ const Home = () => {
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20 fade-in-up">
             <div className="inline-block mb-6 px-6 py-2 bg-gradient-to-r from-amber-100 to-orange-100 rounded-full border border-amber-300">
-              <span className="text-sm font-semibold text-amber-700 uppercase tracking-wider">⭐ Why Choose Us</span>
+              <span className="text-sm font-semibold text-amber-700 uppercase tracking-wider flex items-center gap-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Why Choose Us
+              </span>
             </div>
             <h2 className="text-5xl md:text-6xl font-semibold gradient-text mb-6">
               Why Choose Timberlost Outdoors?
@@ -173,50 +179,50 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="bg-white rounded-2xl shadow-xl group hover:shadow-2xl transition-all p-10 text-center border-2 border-amber-200 hover:border-amber-500 float-animation">
-              <div className="relative inline-block mb-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                <div className="relative w-28 h-28 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 icon-bounce shadow-2xl">
-                  <svg className="w-14 h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+            <div className="bg-white rounded-3xl shadow-xl group hover:shadow-2xl transition-all p-10 text-center border-2 border-amber-200 hover:border-color-primary float-animation relative overflow-hidden">
+              {/* Background decoration */}
+              <div className="absolute top-0 right-0 w-40 h-40 bg-color-primary/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
+              
+              <div className="relative inline-block mb-6">
+                <div className="relative w-20 h-20 bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl flex items-center justify-center mx-auto transform group-hover:scale-110 transition-all duration-500 shadow-lg border-2 border-amber-200">
+                  <FaCheckCircle className="w-10 h-10 text-black" />
                 </div>
               </div>
-              <h3 className="text-2xl font-semibold text-amber-900 mb-4">Quality Products</h3>
-              <p className="text-amber-800 text-lg leading-relaxed">Carefully selected gear and equipment from trusted brands</p>
+              <h3 className="text-2xl font-bold mb-4 relative" style={{ color: '#2C1810' }}>Quality Products</h3>
+              <p className="text-base leading-relaxed relative" style={{ color: '#5C4A3A' }}>Carefully selected gear and equipment from trusted brands</p>
             </div>
             
-            <div className="bg-white rounded-2xl shadow-xl group hover:shadow-2xl transition-all p-10 text-center border-2 border-amber-200 hover:border-amber-500 float-animation" style={{ animationDelay: '1s' }}>
-              <div className="relative inline-block mb-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                <div className="relative w-28 h-28 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 icon-bounce shadow-2xl">
-                  <svg className="w-14 h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+            <div className="bg-white rounded-3xl shadow-xl group hover:shadow-2xl transition-all p-10 text-center border-2 border-amber-200 hover:border-color-primary float-animation relative overflow-hidden" style={{ animationDelay: '0.2s' }}>
+              {/* Background decoration */}
+              <div className="absolute top-0 right-0 w-40 h-40 bg-color-primary/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
+              
+              <div className="relative inline-block mb-6">
+                <div className="relative w-20 h-20 bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl flex items-center justify-center mx-auto transform group-hover:scale-110 transition-all duration-500 shadow-lg border-2 border-amber-200">
+                  <FaTag className="w-10 h-10 text-black" />
                 </div>
               </div>
-              <h3 className="text-2xl font-semibold text-amber-900 mb-4">Competitive Prices</h3>
-              <p className="text-amber-800 text-lg leading-relaxed">Great value on all your outdoor and farm supply needs</p>
+              <h3 className="text-2xl font-bold mb-4 relative" style={{ color: '#2C1810' }}>Competitive Prices</h3>
+              <p className="text-base leading-relaxed relative" style={{ color: '#5C4A3A' }}>Great value on all your outdoor and farm supply needs</p>
             </div>
             
-            <div className="bg-white rounded-2xl shadow-xl group hover:shadow-2xl transition-all p-10 text-center border-2 border-amber-200 hover:border-amber-500 float-animation" style={{ animationDelay: '2s' }}>
-              <div className="relative inline-block mb-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                <div className="relative w-28 h-28 bg-gradient-to-br from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 icon-bounce shadow-2xl">
-                  <svg className="w-14 h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
+            <div className="bg-white rounded-3xl shadow-xl group hover:shadow-2xl transition-all p-10 text-center border-2 border-amber-200 hover:border-color-primary float-animation relative overflow-hidden" style={{ animationDelay: '0.4s' }}>
+              {/* Background decoration */}
+              <div className="absolute top-0 right-0 w-40 h-40 bg-color-primary/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
+              
+              <div className="relative inline-block mb-6">
+                <div className="relative w-20 h-20 bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl flex items-center justify-center mx-auto transform group-hover:scale-110 transition-all duration-500 shadow-lg border-2 border-amber-200">
+                  <FaUsers className="w-10 h-10 text-black" />
                 </div>
               </div>
-              <h3 className="text-2xl font-semibold text-amber-900 mb-4">Friendly Staff</h3>
-              <p className="text-amber-800 text-lg leading-relaxed">Expert advice to help you find the right equipment</p>
+              <h3 className="text-2xl font-bold mb-4 relative" style={{ color: '#2C1810' }}>Friendly Staff</h3>
+              <p className="text-base leading-relaxed relative" style={{ color: '#5C4A3A' }}>Expert advice to help you find the right equipment</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gradient-to-br from-amber-50 to-orange-50 relative overflow-hidden">
+      <section className="py-20 bg-white relative overflow-hidden">
         {/* Subtle Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-10 right-10 w-64 h-64 bg-amber-300 rounded-full blur-3xl animate-pulse"></div>
@@ -226,7 +232,12 @@ const Home = () => {
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 fade-in-up">
             <div className="inline-block mb-4 px-6 py-2 bg-white backdrop-blur-sm rounded-full shadow-lg border-2 border-amber-300">
-              <span className="text-sm font-semibold text-amber-700 uppercase tracking-wider">🎯 Our Services</span>
+              <span className="text-sm font-semibold text-amber-700 uppercase tracking-wider flex items-center gap-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Our Services
+              </span>
             </div>
             <h2 className="text-5xl md:text-6xl font-semibold gradient-text mb-6">Our Services</h2>
             <p className="text-xl md:text-2xl text-amber-900 font-normal">Everything you need for outdoor adventures and daily necessities</p>
@@ -241,8 +252,11 @@ const Home = () => {
           </div>
           
           <div className="text-center mt-16 fade-in-up">
-            <Link to="/services" className="btn-primary inline-block pulse-glow shadow-2xl">
-              🚀 View All Services
+            <Link to="/services" className="btn-primary inline-flex items-center gap-3 pulse-glow shadow-2xl text-white">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              View All Services
             </Link>
           </div>
         </div>
