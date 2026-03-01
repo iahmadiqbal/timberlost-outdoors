@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import TestimonialCard from '../components/TestimonialCard';
-import { FaCheckCircle, FaTag, FaUsers } from 'react-icons/fa';
+import { FaCheckCircle, FaTag, FaUsers, FaDirections } from 'react-icons/fa';
 
 const Home = () => {
   const services = [
@@ -292,10 +292,10 @@ const Home = () => {
       <section className="py-24 relative overflow-hidden">
         {/* Background Image - Pixel Perfect from Pexels */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/50 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/50 to-black/65 z-10"></div>
           <img 
-            src="https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg?auto=compress&cs=tinysrgb&w=1920" 
-            alt="Outdoor adventure" 
+            src="https://images.pexels.com/photos/1884584/pexels-photo-1884584.jpeg?auto=compress&cs=tinysrgb&w=1920" 
+            alt="Outdoor gear store" 
             className="w-full h-full object-cover"
             loading="lazy"
           />
@@ -308,12 +308,13 @@ const Home = () => {
         
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-30 text-center">
           <div className="fade-in-up">
-            <h2 className="text-5xl md:text-6xl font-semibold mb-6 text-white drop-shadow-2xl">Ready to Gear Up?</h2>
+            <h2 className="text-5xl md:text-6xl font-semibold mb-6 !text-white drop-shadow-2xl">Ready to Gear Up?</h2>
             <p className="text-2xl md:text-3xl mb-12 text-white drop-shadow-lg font-normal leading-relaxed">
               Visit our store today and let our friendly staff help you find exactly what you need
             </p>
-            <Link to="/contact" className="inline-block bg-white text-amber-700 px-10 py-5 rounded-2xl font-semibold text-xl hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-amber-500/50 transform hover:bg-amber-50 border-2 border-amber-500">
-              🗺️ Get Directions Now
+            <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-amber-700 px-8 py-4 rounded-xl font-medium text-lg hover:-translate-y-2 transition-all duration-500 ease-in-out hover:bg-amber-50 border-2 border-amber-500 float-animation">
+              <FaDirections className="text-xl" />
+              Get Directions Now
             </Link>
           </div>
         </div>
