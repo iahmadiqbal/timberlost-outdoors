@@ -111,8 +111,8 @@ const Navbar = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-lg font-bold text-gray-900">Timberlost</h3>
-              <p className="text-xs text-gray-900 font-bold">Outdoors & Surplus</p>
+              <h3 className="text-lg font-bold text-gray-900">Timberlost Outdoors</h3>
+              <p className="text-lg font-bold text-gray-900">and Surplus</p>
             </div>
           </div>
           <button
