@@ -37,7 +37,7 @@ const Contact = () => {
         </div>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="text-center">
-            <div className="inline-block mb-6 px-10 py-4 bg-white/95 backdrop-blur-md rounded-full border-2 border-amber-500 shadow-xl animate-bounce">
+            <div className="inline-block mb-6 px-10 py-4 bg-white/95 backdrop-blur-md rounded-full border-2 border-amber-500 shadow-xl">
               <span className="text-base font-bold tracking-wider text-amber-700 uppercase">Contact Us</span>
             </div>
             <h1 className="text-6xl md:text-7xl font-bold mb-6 !text-white drop-shadow-2xl">Get In Touch</h1>
@@ -57,8 +57,8 @@ const Contact = () => {
               <div className="space-y-6">
                 <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-amber-200 hover:border-amber-500 transition-all duration-300 hover:-translate-y-1 group">
                   <div className="flex items-start">
-                    <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                      <FaMapMarkerAlt className="text-xl text-amber-500" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 border-2 border-amber-300">
+                      <FaMapMarkerAlt className="text-xl text-amber-600" />
                     </div>
                     <div>
                       <h3 className="font-bold text-amber-900 mb-2 text-lg">Location</h3>
@@ -70,8 +70,8 @@ const Contact = () => {
 
                 <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-amber-200 hover:border-amber-500 transition-all duration-300 hover:-translate-y-1 group">
                   <div className="flex items-start">
-                    <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                      <FaPhone className="text-xl text-amber-500" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 border-2 border-amber-300">
+                      <FaPhone className="text-xl text-amber-600" />
                     </div>
                     <div>
                       <h3 className="font-bold text-amber-900 mb-2 text-lg">Phone</h3>
@@ -85,8 +85,8 @@ const Contact = () => {
 
                 <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-amber-200 hover:border-amber-500 transition-all duration-300 hover:-translate-y-1 group">
                   <div className="flex items-start">
-                    <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                      <FaEnvelope className="text-xl text-amber-500" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 border-2 border-amber-300">
+                      <FaEnvelope className="text-xl text-amber-600" />
                     </div>
                     <div>
                       <h3 className="font-bold text-amber-900 mb-2 text-lg">Email</h3>
@@ -99,8 +99,8 @@ const Contact = () => {
 
                 <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-amber-200 hover:border-amber-500 transition-all duration-300 hover:-translate-y-1 group">
                   <div className="flex items-start">
-                    <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                      <FaClock className="text-xl text-amber-500" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 border-2 border-amber-300">
+                      <FaClock className="text-xl text-amber-600" />
                     </div>
                     <div>
                       <h3 className="font-bold text-amber-900 mb-2 text-lg">Store Hours</h3>
@@ -112,8 +112,8 @@ const Contact = () => {
 
                 <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-amber-200 hover:border-amber-500 transition-all duration-300 hover:-translate-y-1 group">
                   <div className="flex items-start">
-                    <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                      <FaFacebook className="text-xl text-amber-500" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 border-2 border-amber-300">
+                      <FaFacebook className="text-xl text-amber-600" />
                     </div>
                     <div>
                       <h3 className="font-bold text-amber-900 mb-2 text-lg">Social Media</h3>
@@ -224,7 +224,7 @@ const Contact = () => {
             className="block bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl shadow-xl border-2 border-amber-500 overflow-hidden py-12 px-6 hover:scale-105 transition-transform duration-500 cursor-pointer"
           >
             <div className="text-center">
-              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-3 animate-bounce">
+              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-3">
                 <FaMapMarkerAlt className="text-2xl text-amber-500" />
               </div>
               <h3 className="text-lg font-bold text-amber-900 mb-1">105 Main St, Big River</h3>

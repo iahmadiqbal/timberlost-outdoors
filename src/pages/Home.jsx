@@ -47,17 +47,20 @@ const Home = () => {
     {
       name: 'John M.',
       text: 'Great selection and friendly staff. They helped me find exactly what I needed for my camping trip.',
-      rating: 5
+      rating: 5,
+      image: 'https://randomuser.me/api/portraits/men/32.jpg'
     },
     {
       name: 'Sarah K.',
       text: 'Best outdoor store in Saskatchewan! Competitive prices and knowledgeable team.',
-      rating: 5
+      rating: 5,
+      image: 'https://randomuser.me/api/portraits/women/44.jpg'
     },
     {
       name: 'Mike R.',
       text: 'One-stop shop for all my hunting and fishing needs. Highly recommend!',
-      rating: 5
+      rating: 5,
+      image: 'https://randomuser.me/api/portraits/men/52.jpg'
     }
   ];
 
@@ -135,7 +138,7 @@ const Home = () => {
             
             {/* Scroll Indicator */}
             <div className="fade-in-up stagger-5">
-              <div className="inline-flex flex-col items-center animate-bounce">
+              <div className="inline-flex flex-col items-center">
                 <span className="text-sm font-medium mb-3 text-white drop-shadow-lg uppercase tracking-wider">Discover More</span>
                 <div className="w-8 h-12 border-2 border-white rounded-full flex justify-center p-2">
                   <div className="w-1 h-3 bg-white rounded-full animate-pulse"></div>
@@ -180,7 +183,7 @@ const Home = () => {
               
               <div className="relative inline-block mb-6">
                 <div className="relative w-20 h-20 bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl flex items-center justify-center mx-auto transform group-hover:scale-110 transition-all duration-500 shadow-lg border-2 border-amber-200">
-                  <FaCheckCircle className="w-10 h-10 text-black" />
+                  <FaCheckCircle className="w-10 h-10 text-amber-600" />
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4 relative" style={{ color: '#2C1810' }}>Quality Products</h3>
@@ -193,7 +196,7 @@ const Home = () => {
               
               <div className="relative inline-block mb-6">
                 <div className="relative w-20 h-20 bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl flex items-center justify-center mx-auto transform group-hover:scale-110 transition-all duration-500 shadow-lg border-2 border-amber-200">
-                  <FaTag className="w-10 h-10 text-black" />
+                  <FaTag className="w-10 h-10 text-amber-600" />
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4 relative" style={{ color: '#2C1810' }}>Competitive Prices</h3>
@@ -206,7 +209,7 @@ const Home = () => {
               
               <div className="relative inline-block mb-6">
                 <div className="relative w-20 h-20 bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl flex items-center justify-center mx-auto transform group-hover:scale-110 transition-all duration-500 shadow-lg border-2 border-amber-200">
-                  <FaUsers className="w-10 h-10 text-black" />
+                  <FaUsers className="w-10 h-10 text-amber-600" />
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4 relative" style={{ color: '#2C1810' }}>Friendly Staff</h3>
@@ -270,7 +273,7 @@ const Home = () => {
               <span className="text-sm font-semibold text-amber-700 uppercase tracking-wider">💬 Testimonials</span>
             </div>
             <h2 className="text-5xl md:text-6xl font-semibold gradient-text mb-6">What Our Customers Say</h2>
-            <p className="text-xl md:text-2xl text-amber-800 font-normal">Trusted by Saskatchewan's outdoor community</p>
+            <p className="text-xl md:text-2xl text-amber-800 font-normal">Trusted by Timberlost Outdoors and Surplus Store</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -1,4 +1,4 @@
-const TestimonialCard = ({ name, text, rating }) => {
+const TestimonialCard = ({ name, text, rating, image }) => {
   return (
     <div className="card group h-full bg-white hover:shadow-2xl">
       <div className="p-8 h-full flex flex-col relative overflow-hidden">
@@ -27,8 +27,12 @@ const TestimonialCard = ({ name, text, rating }) => {
         </p>
         
         <div className="flex items-center relative z-10">
-          <div className="w-12 h-12 bg-gradient-to-br from-color-primary to-color-accent rounded-full flex items-center justify-center mr-4 transform group-hover:scale-110 transition-transform duration-300">
-            <span className="text-white font-bold text-lg">{name.charAt(0)}</span>
+          <div className="w-16 h-16 rounded-full overflow-hidden mr-4 transform group-hover:scale-110 transition-transform duration-300 border-4 border-color-primary shadow-lg">
+            <img 
+              src={image}
+              alt={name}
+              className="w-full h-full object-cover"
+            />
           </div>
           <div>
             <p className="font-black text-lg" style={{ color: '#2C1810' }}>{name}</p>

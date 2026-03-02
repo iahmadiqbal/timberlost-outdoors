@@ -16,7 +16,7 @@ const About = () => {
         </div>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="text-center">
-            <div className="inline-block mb-6 px-10 py-4 bg-white/95 backdrop-blur-md rounded-full border-2 border-amber-500 shadow-xl animate-bounce">
+            <div className="inline-block mb-6 px-10 py-4 bg-white/95 backdrop-blur-md rounded-full border-2 border-amber-500 shadow-xl">
               <span className="text-base font-bold tracking-wider text-amber-700 uppercase">About Us</span>
             </div>
             <h1 className="text-6xl md:text-7xl font-bold mb-6 !text-white drop-shadow-2xl">Our Story</h1>
@@ -90,7 +90,7 @@ const About = () => {
             <div>
               <h2 className="text-5xl md:text-6xl font-bold text-amber-900 mb-8">Our Mission</h2>
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                To provide Saskatchewan's outdoor community with quality gear, equipment, and supplies at competitive prices, backed by friendly, knowledgeable service that helps every customer find exactly what they need.
+                To provide our outdoor community with quality gear, equipment, and supplies at competitive prices, backed by friendly, knowledgeable service that helps every customer find exactly what they need.
               </p>
               <div className="space-y-6">
                 <div className="flex items-start group">
@@ -117,7 +117,7 @@ const About = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-amber-900 mb-2 text-xl">Community Driven</h3>
-                    <p className="text-gray-700">Proud to serve Saskatchewan's outdoor enthusiasts</p>
+                    <p className="text-gray-700">Proud to serve outdoor enthusiasts</p>
                   </div>
                 </div>
               </div>
@@ -153,7 +153,7 @@ const About = () => {
                   <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <FaMapMarkerAlt className="text-xl text-amber-500" />
                   </div>
-                  <span>Local Saskatchewan business</span>
+                  <span>Local business</span>
                 </li>
               </ul>
             </div>

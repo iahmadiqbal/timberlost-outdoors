@@ -28,11 +28,11 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-black" style={{ color: '#2C1810' }}>Timberlost Outdoors</h3>
-                <p className="text-color-primary font-black">& Surplus</p>
+                <p className="text-2xl font-black" style={{ color: '#2C1810' }}>and Surplus</p>
               </div>
             </div>
             <p className="mb-4 text-base leading-relaxed max-w-md font-medium" style={{ color: '#5C4A3A' }}>
-              Serving Saskatchewan's outdoor community with quality camping gear, hunting and fishing equipment, winter accessories, and farm supplies.
+              Timberlost Outdoors and Surplus Store - Your trusted source for quality camping gear, hunting and fishing equipment, winter accessories, and farm supplies.
             </p>
             
             {/* Social Media */}
@@ -95,8 +95,8 @@ const Footer = () => {
               Contact Info
             </h4>
             <ul className="space-y-3">
-              <li className="flex items-center group">
-                <div className="w-10 h-10 bg-white hover:bg-black rounded-lg flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 border-2 border-color-primary shadow-md">
+              <li className="flex items-center">
+                <div className="w-10 h-10 bg-white hover:bg-black rounded-lg flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 border-2 border-color-primary shadow-md group">
                   <MdLocationOn className="w-5 h-5 text-color-accent group-hover:text-white transition-colors" />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -104,8 +104,8 @@ const Footer = () => {
                   <p className="font-bold text-sm font-['Poppins']" style={{ color: '#2C1810' }}>SK S0J 0E0, Canada</p>
                 </div>
               </li>
-              <li className="flex items-center group">
-                <div className="w-10 h-10 bg-white hover:bg-black rounded-lg flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 border-2 border-color-primary shadow-md">
+              <li className="flex items-center">
+                <div className="w-10 h-10 bg-white hover:bg-black rounded-lg flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 border-2 border-color-primary shadow-md group">
                   <MdPhone className="w-5 h-5 text-color-accent group-hover:text-white transition-colors" />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -114,8 +114,8 @@ const Footer = () => {
                   </a>
                 </div>
               </li>
-              <li className="flex items-center group">
-                <div className="w-10 h-10 bg-white hover:bg-black rounded-lg flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 border-2 border-color-primary shadow-md">
+              <li className="flex items-center">
+                <div className="w-10 h-10 bg-white hover:bg-black rounded-lg flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 border-2 border-color-primary shadow-md group">
                   <MdEmail className="w-5 h-5 text-color-accent group-hover:text-white transition-colors" />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -137,7 +137,7 @@ const Footer = () => {
             <div className="flex items-center gap-2 font-medium" style={{ color: '#5C4A3A' }}>
               <span>Made with</span>
               <span className="text-color-error animate-pulse">❤️</span>
-              <span>for Saskatchewan's outdoor community</span>
+              <span>for Timberlost Outdoors and Surplus Store</span>
             </div>
           </div>
         </div>

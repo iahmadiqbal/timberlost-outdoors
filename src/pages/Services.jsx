@@ -57,7 +57,7 @@ const Services = () => {
         </div>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="text-center">
-            <div className="inline-block mb-6 px-10 py-4 bg-white/95 backdrop-blur-md rounded-full border-2 border-amber-500 shadow-xl animate-bounce">
+            <div className="inline-block mb-6 px-10 py-4 bg-white/95 backdrop-blur-md rounded-full border-2 border-amber-500 shadow-xl">
               <span className="text-base font-bold tracking-wider text-amber-700 uppercase">Our Services</span>
             </div>
             <h1 className="text-6xl md:text-7xl font-bold mb-6 !text-white drop-shadow-2xl">Our Services</h1>
