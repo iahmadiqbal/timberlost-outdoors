@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="md:col-span-1">
             <h4 className="text-xl font-black mb-4 flex items-center font-['Poppins']" style={{ color: '#2C1810' }}>
               <span className="w-1.5 h-6 bg-gradient-to-b from-color-primary to-color-accent rounded-full mr-3"></span>
               Quick Links
@@ -89,13 +89,13 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="md:col-span-1">
             <h4 className="text-xl font-black mb-4 flex items-center font-['Poppins']" style={{ color: '#2C1810' }}>
               <span className="w-1.5 h-6 bg-gradient-to-b from-color-primary to-color-accent rounded-full mr-3"></span>
               Contact Info
             </h4>
             <ul className="space-y-3">
-              <li className="flex items-center">
+              <li className="flex items-start">
                 <div className="w-10 h-10 bg-white hover:bg-black rounded-lg flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 border-2 border-color-primary shadow-md group">
                   <MdLocationOn className="w-5 h-5 text-color-accent group-hover:text-white transition-colors" />
                 </div>
@@ -104,22 +104,22 @@ const Footer = () => {
                   <p className="font-bold text-sm font-['Poppins']" style={{ color: '#2C1810' }}>SK S0J 0E0, Canada</p>
                 </div>
               </li>
-              <li className="flex items-center">
+              <li className="flex items-start">
                 <div className="w-10 h-10 bg-white hover:bg-black rounded-lg flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 border-2 border-color-primary shadow-md group">
                   <MdPhone className="w-5 h-5 text-color-accent group-hover:text-white transition-colors" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <a href="tel:+13064692437" className="hover:text-color-primary transition-colors text-sm block whitespace-nowrap font-['Poppins']" style={{ color: '#2C1810' }}>
+                  <a href="tel:+13064692437" className="hover:text-color-primary transition-colors text-sm block font-['Poppins']" style={{ color: '#2C1810' }}>
                     +1 306-469-2437
                   </a>
                 </div>
               </li>
-              <li className="flex items-center">
+              <li className="flex items-start">
                 <div className="w-10 h-10 bg-white hover:bg-black rounded-lg flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 border-2 border-color-primary shadow-md group">
                   <MdEmail className="w-5 h-5 text-color-accent group-hover:text-white transition-colors" />
                 </div>
-                <div className="flex-1 min-w-0">
-                  <a href="mailto:info@timberlostoutdoorsandsurplus.com" className="hover:text-color-primary transition-colors text-sm block whitespace-nowrap overflow-hidden text-ellipsis font-['Poppins']" style={{ color: '#2C1810' }}>
+                <div className="flex-1 min-w-0 overflow-hidden">
+                  <a href="mailto:info@timberlostoutdoorsandsurplus.com" className="hover:text-color-primary transition-colors text-sm block font-['Poppins'] whitespace-nowrap" style={{ color: '#2C1810', fontSize: '0.8rem' }}>
                     info@timberlostoutdoorsandsurplus.com
                   </a>
                 </div>
