@@ -98,26 +98,24 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu - Modern Redesign */}
-      <div className={`fixed top-0 right-0 h-full w-80 bg-gradient-to-br from-white via-orange-50/30 to-amber-50/50 shadow-2xl transform transition-transform duration-300 ease-out z-50 ${
+      {/* Mobile Menu - Simple Clean Design */}
+      <div className={`fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-out z-50 ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
         {/* Header */}
-        <div className="flex justify-between items-center p-6 border-b-2 border-orange-200 bg-white/80 backdrop-blur-sm">
+        <div className="flex justify-between items-center p-6 border-b border-gray-200">
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 flex items-center justify-center shadow-lg overflow-hidden bg-gradient-to-br from-orange-500 to-amber-600 p-0.5">
-              <div className="w-full h-full bg-white p-1">
-                <img src={logo} alt="Timberlost Outdoors" className="w-full h-full object-contain" />
-              </div>
+            <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg overflow-hidden">
+              <img src={logo} alt="Timberlost Outdoors" className="w-full h-full object-cover" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-gray-900">Timberlost Outdoors</h3>
-              <p className="text-lg font-bold text-gray-900">and Surplus</p>
+              <h3 className="text-base font-black text-black leading-tight">Timberlost Outdoors</h3>
+              <p className="text-base font-black text-black leading-tight">and Surplus</p>
             </div>
           </div>
           <button
             onClick={() => setIsOpen(false)}
-            className="w-10 h-10 bg-gradient-to-br from-orange-100 to-amber-100 hover:from-orange-200 hover:to-amber-200 rounded-xl flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-110"
+            className="w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-lg flex items-center justify-center transition-all duration-300"
           >
             <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
@@ -132,49 +130,29 @@ const Navbar = () => {
               key={link.path}
               to={link.path}
               onClick={() => setIsOpen(false)}
-              className={`block px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300 transform hover:scale-105 ${
+              className={`block px-6 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-sm hover:shadow-md border ${
                 isActive(link.path)
-                  ? 'bg-gradient-to-r from-orange-500 to-amber-600 text-white shadow-lg'
-                  : 'bg-white text-gray-900 hover:bg-gradient-to-r hover:from-orange-50 hover:to-amber-50 hover:text-orange-600 shadow-md hover:shadow-lg border-2 border-transparent hover:border-orange-200'
+                  ? 'bg-gradient-to-r from-orange-500 to-amber-600 text-white border-transparent'
+                  : 'bg-white text-gray-900 hover:bg-gray-50 border-gray-100'
               }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-center justify-between">
-                <span>{link.name}</span>
-                {isActive(link.path) && (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                  </svg>
-                )}
-              </div>
+              {link.name}
             </Link>
           ))}
         </div>
 
-        {/* CTA Button */}
+        {/* Visit Store Button */}
         <div className="px-6 py-4">
-          <Link
-            to="/contact"
+          <a
+            href="#store"
             onClick={() => setIsOpen(false)}
-            className={`block px-5 py-3.5 rounded-lg text-center transition-all duration-300 border border-primary ${
-              isActive('/contact')
-                ? 'bg-gradient-to-r from-primary to-accent text-white font-bold'
-                : 'bg-white text-gray-900 hover:text-primary font-medium'
-            }`}
-            style={{ fontWeight: isActive('/contact') ? '700' : '500' }}
+            className="block px-6 py-3.5 rounded-xl text-center font-medium text-gray-900 bg-gray-100 hover:bg-gray-200 transition-all duration-300 border border-gray-200"
           >
             <div className="flex items-center justify-center space-x-2">
               <BuildingStorefrontIcon className="w-5 h-5" />
               <span>Visit Our Store</span>
             </div>
-          </Link>
-        </div>
-
-        {/* Footer Info */}
-        <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-white to-transparent">
-          <p className="text-xs text-center text-gray-600 font-medium">
-            Made with ❤️ for Saskatchewan's outdoor community
-          </p>
+          </a>
         </div>
       </div>
 
