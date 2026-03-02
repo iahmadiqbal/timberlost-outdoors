@@ -35,17 +35,17 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-xl blur-lg opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent blur-lg opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative w-14 h-14 bg-gradient-to-br from-primary to-accent flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl overflow-hidden">
                 <img src={logo} alt="Timberlost Outdoors" className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="transform group-hover:translate-x-1 transition-transform duration-300">
-              <h1 className="text-xl font-black tracking-tight text-black">
-                Timberlost Outdoors and Surplus
+              <h1 className="text-xl font-black tracking-tight text-black leading-tight">
+                Timberlost Outdoors
               </h1>
-              <p className="text-xs font-semibold text-secondary">
-                Outdoor Outfitter
+              <p className="text-xl font-black tracking-tight text-black leading-tight">
+                and Surplus
               </p>
             </div>
           </Link>
@@ -105,14 +105,14 @@ const Navbar = () => {
         {/* Header */}
         <div className="flex justify-between items-center p-6 border-b-2 border-orange-200 bg-white/80 backdrop-blur-sm">
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg overflow-hidden bg-gradient-to-br from-orange-500 to-amber-600 p-0.5">
-              <div className="w-full h-full bg-white rounded-lg p-1">
+            <div className="w-12 h-12 flex items-center justify-center shadow-lg overflow-hidden bg-gradient-to-br from-orange-500 to-amber-600 p-0.5">
+              <div className="w-full h-full bg-white p-1">
                 <img src={logo} alt="Timberlost Outdoors" className="w-full h-full object-contain" />
               </div>
             </div>
             <div>
               <h3 className="text-lg font-bold text-gray-900">Timberlost</h3>
-              <p className="text-xs text-gray-600 font-medium">Outdoors & Surplus</p>
+              <p className="text-xs text-gray-900 font-bold">Outdoors & Surplus</p>
             </div>
           </div>
           <button

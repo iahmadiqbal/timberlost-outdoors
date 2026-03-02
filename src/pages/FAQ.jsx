@@ -182,7 +182,7 @@ const FAQ = () => {
           <p className="text-2xl mb-8 !text-white drop-shadow-lg font-medium">
             We're here to help! Contact us or visit our store and our friendly staff will be happy to assist you.
           </p>
-          <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-amber-700 px-8 py-4 rounded-xl font-semibold text-lg hover:-translate-y-2 transition-all duration-500 ease-in-out hover:bg-amber-50 border-2 border-amber-500 shadow-xl hover:shadow-2xl">
+          <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-amber-700 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-amber-50 border-2 border-amber-500 shadow-xl hover:shadow-2xl">
             <FaPhone className="text-xl" />
             Contact Us Now
           </Link>

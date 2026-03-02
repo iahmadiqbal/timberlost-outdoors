@@ -86,7 +86,7 @@ const Home = () => {
           <div className="text-center">
             {/* Badge */}
             <div className="inline-block mb-6 px-10 py-4 bg-white/95 backdrop-blur-xl rounded-full border-2 border-amber-500 shadow-2xl fade-in-up">
-              <span className="text-base font-bold tracking-wider text-amber-700 uppercase">🏔️ Saskatchewan's Premier Outdoor Store</span>
+              <span className="text-base font-bold tracking-wider text-amber-700 uppercase">🏔️ Timberlost Outdoors and Surplus Store</span>
             </div>
             
             {/* Main Heading */}
@@ -104,11 +104,11 @@ const Home = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in-up stagger-3 mb-16">
-              <Link to="/services" className="inline-flex items-center gap-3 px-8 py-4 bg-white/95 backdrop-blur-sm text-amber-700 rounded-xl font-semibold text-lg transition-all duration-500 transform hover:-translate-y-2 border-2 border-amber-500 float-animation hover:bg-amber-50">
+              <Link to="/services" className="inline-flex items-center gap-3 px-8 py-4 bg-white/95 backdrop-blur-sm text-amber-700 rounded-xl font-semibold text-lg transition-all duration-300 border-2 border-amber-500 hover:bg-amber-50">
                 <FaShoppingBag className="text-xl text-amber-700" />
                 <span>Explore Our Services</span>
               </Link>
-              <Link to="/contact" className="inline-flex items-center gap-3 px-8 py-4 bg-white/95 backdrop-blur-sm text-amber-700 rounded-xl font-semibold text-lg transition-all duration-500 transform hover:-translate-y-2 border-2 border-amber-500 float-animation hover:bg-amber-50">
+              <Link to="/contact" className="inline-flex items-center gap-3 px-8 py-4 bg-white/95 backdrop-blur-sm text-amber-700 rounded-xl font-semibold text-lg transition-all duration-300 border-2 border-amber-500 hover:bg-amber-50">
                 <FaMapMarkedAlt className="text-xl text-amber-700" />
                 <span>Visit Our Store</span>
               </Link>
@@ -116,18 +116,18 @@ const Home = () => {
             
             {/* Features Quick View */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16 fade-in-up stagger-4">
-              <div className="bg-white/90 backdrop-blur-xl rounded-2xl p-6 border-2 border-white hover:border-amber-500 transition-all duration-300 hover:scale-105 shadow-xl">
-                <div className="text-4xl mb-3 text-amber-700"><FaCampground /></div>
+              <div className="bg-white/90 backdrop-blur-xl rounded-2xl p-6 border-2 border-white hover:border-amber-500 transition-all duration-300 hover:scale-105 shadow-xl text-center">
+                <div className="text-4xl mb-3 text-amber-700 flex justify-center"><FaCampground /></div>
                 <h3 className="text-lg font-semibold text-amber-900 mb-2">Premium Gear</h3>
                 <p className="text-sm text-amber-700 font-normal">Top quality outdoor equipment</p>
               </div>
-              <div className="bg-white/90 backdrop-blur-xl rounded-2xl p-6 border-2 border-white hover:border-amber-500 transition-all duration-300 hover:scale-105 shadow-xl">
-                <div className="text-4xl mb-3 text-amber-700"><FaDollarSign /></div>
+              <div className="bg-white/90 backdrop-blur-xl rounded-2xl p-6 border-2 border-white hover:border-amber-500 transition-all duration-300 hover:scale-105 shadow-xl text-center">
+                <div className="text-4xl mb-3 text-amber-700 flex justify-center"><FaDollarSign /></div>
                 <h3 className="text-lg font-semibold text-amber-900 mb-2">Best Prices</h3>
                 <p className="text-sm text-amber-700 font-normal">Competitive rates guaranteed</p>
               </div>
-              <div className="bg-white/90 backdrop-blur-xl rounded-2xl p-6 border-2 border-white hover:border-amber-500 transition-all duration-300 hover:scale-105 shadow-xl">
-                <div className="text-4xl mb-3 text-amber-700"><FaUserFriends /></div>
+              <div className="bg-white/90 backdrop-blur-xl rounded-2xl p-6 border-2 border-white hover:border-amber-500 transition-all duration-300 hover:scale-105 shadow-xl text-center">
+                <div className="text-4xl mb-3 text-amber-700 flex justify-center"><FaUserFriends /></div>
                 <h3 className="text-lg font-semibold text-amber-900 mb-2">Expert Staff</h3>
                 <p className="text-sm text-amber-700 font-normal">Knowledgeable & friendly</p>
               </div>
@@ -247,7 +247,7 @@ const Home = () => {
           </div>
           
           <div className="text-center mt-16 fade-in-up">
-            <Link to="/services" className="btn-primary inline-flex items-center gap-3 pulse-glow shadow-2xl text-white">
+            <Link to="/services" className="btn-primary inline-flex items-center gap-3 shadow-2xl text-white">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
@@ -307,7 +307,7 @@ const Home = () => {
             <p className="text-2xl md:text-3xl mb-12 text-white drop-shadow-lg font-normal leading-relaxed">
               Visit our store today and let our friendly staff help you find exactly what you need
             </p>
-            <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-amber-700 px-8 py-4 rounded-xl font-medium text-lg hover:-translate-y-2 transition-all duration-500 ease-in-out hover:bg-amber-50 border-2 border-amber-500 float-animation">
+            <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-amber-700 px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300 hover:bg-amber-50 border-2 border-amber-500">
               <FaDirections className="text-xl" />
               Get Directions Now
             </Link>

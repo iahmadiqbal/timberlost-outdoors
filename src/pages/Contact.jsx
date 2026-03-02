@@ -196,7 +196,7 @@ const Contact = () => {
                       ></textarea>
                     </div>
 
-                    <button type="submit" className="w-full inline-flex items-center justify-center gap-3 bg-white text-amber-700 px-8 py-4 rounded-xl font-medium text-lg hover:-translate-y-2 transition-all duration-500 border-2 border-amber-500 shadow-lg hover:shadow-2xl hover:bg-amber-50">
+                    <button type="submit" className="w-full inline-flex items-center justify-center gap-3 bg-white text-amber-700 px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300 border-2 border-amber-500 shadow-lg hover:shadow-2xl hover:bg-amber-50">
                       <FaPaperPlane className="text-xl" />
                       Send Message
                     </button>

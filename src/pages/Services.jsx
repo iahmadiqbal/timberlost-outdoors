@@ -175,7 +175,7 @@ const Services = () => {
           <p className="text-2xl md:text-3xl mb-12 !text-white drop-shadow-lg leading-relaxed">
             Visit our store and let us help you find exactly what you need
           </p>
-          <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-amber-700 px-8 py-4 rounded-xl font-medium text-lg hover:-translate-y-2 transition-all duration-500 hover:bg-amber-50 border-2 border-amber-500 float-animation">
+          <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-amber-700 px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300 hover:bg-amber-50 border-2 border-amber-500">
             <FaMapMarkedAlt className="text-xl" />
             Contact Us Today
           </Link>
