@@ -109,8 +109,8 @@ const Navbar = () => {
               <img src={logo} alt="Timberlost Outdoors" className="w-full h-full object-cover" />
             </div>
             <div>
-              <h3 className="text-base font-black text-black leading-tight">Timberlost Outdoors</h3>
-              <p className="text-base font-black text-black leading-tight">and Surplus</p>
+              <h3 className="text-sm font-black text-black leading-tight">Timberlost Outdoors</h3>
+              <p className="text-sm font-black text-black leading-tight">and Surplus</p>
             </div>
           </div>
           <button
