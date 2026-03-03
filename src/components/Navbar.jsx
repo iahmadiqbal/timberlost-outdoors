@@ -58,10 +58,10 @@ const Navbar = () => {
               </div>
             </div>
             <div className="transform group-hover:translate-x-1 transition-transform duration-300">
-              <h1 className="text-xl font-black tracking-tight text-black leading-tight">
+              <h1 className="text-base md:text-xl font-black tracking-tight text-black leading-tight">
                 Timberlost Outdoors
               </h1>
-              <p className="text-xl font-black tracking-tight text-black leading-tight">
+              <p className="text-base md:text-xl font-black tracking-tight text-black leading-tight">
                 and Surplus
               </p>
             </div>
