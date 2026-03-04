@@ -1,7 +1,7 @@
-const TestimonialCard = ({ name, text, rating, image }) => {
+const TestimonialCard = ({ name, text, rating, image, role }) => {
   return (
-    <div className="card group h-full bg-white hover:shadow-2xl">
-      <div className="p-8 h-full flex flex-col relative overflow-hidden">
+    <div className="card group bg-white hover:shadow-2xl h-full flex flex-col">
+      <div className="p-8 flex flex-col relative overflow-hidden flex-1">
         {/* Quote Icon Background */}
         <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
           <svg className="w-24 h-24 text-color-primary" fill="currentColor" viewBox="0 0 24 24">
@@ -22,12 +22,12 @@ const TestimonialCard = ({ name, text, rating, image }) => {
           ))}
         </div>
         
-        <p className="text-lg mb-6 italic leading-relaxed flex-grow relative z-10 font-medium" style={{ color: '#5C4A3A' }}>
+        <p className="text-base mb-6 italic leading-relaxed flex-grow relative z-10 font-medium" style={{ color: '#5C4A3A', minHeight: '120px' }}>
           "{text}"
         </p>
         
-        <div className="flex items-center relative z-10">
-          <div className="w-16 h-16 rounded-full overflow-hidden mr-4 transform group-hover:scale-110 transition-transform duration-300 border-4 border-color-primary shadow-lg">
+        <div className="flex items-center relative z-10 mt-auto">
+          <div className="w-14 h-14 rounded-full overflow-hidden mr-4 transform group-hover:scale-110 transition-transform duration-300 border-4 border-color-primary shadow-lg flex-shrink-0">
             <img 
               src={image}
               alt={name}
@@ -35,8 +35,8 @@ const TestimonialCard = ({ name, text, rating, image }) => {
             />
           </div>
           <div>
-            <p className="font-black text-lg" style={{ color: '#2C1810' }}>{name}</p>
-            <p className="text-sm font-semibold" style={{ color: '#8C7A6A' }}>Verified Customer</p>
+            <p className="font-black text-base" style={{ color: '#2C1810' }}>{name}</p>
+            <p className="text-xs font-semibold" style={{ color: '#8C7A6A' }}>{role || 'Verified Customer'}</p>
           </div>
         </div>
       </div>

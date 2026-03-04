@@ -2,6 +2,11 @@ import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import TestimonialCard from '../components/TestimonialCard';
 import { FaCheckCircle, FaTag, FaUsers, FaDirections, FaShoppingBag, FaMapMarkedAlt, FaCampground, FaDollarSign, FaUserFriends } from 'react-icons/fa';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const Home = () => {
   const services = [
@@ -45,22 +50,116 @@ const Home = () => {
 
   const testimonials = [
     {
-      name: 'John M.',
-      text: 'Great selection and friendly staff. They helped me find exactly what I needed for my camping trip.',
+      name: 'Kalvin Jones',
+      text: 'Awesome 😎 high quality items at a decent price and very friendly staff. What more could you ask for ??? Btw low cost hunting supplies 👌',
       rating: 5,
-      image: 'https://randomuser.me/api/portraits/men/32.jpg'
+      image: 'https://randomuser.me/api/portraits/men/32.jpg',
+      role: 'Local Guide · 56 reviews'
     },
     {
-      name: 'Sarah K.',
-      text: 'Best outdoor store in Saskatchewan! Competitive prices and knowledgeable team.',
+      name: 'DB M',
+      text: 'They are Excellent people. Good to have them here, I support them and buy here. Good quality stock. Everything from hunting gear to clothes, food and water refills.',
       rating: 5,
-      image: 'https://randomuser.me/api/portraits/women/44.jpg'
+      image: 'https://randomuser.me/api/portraits/men/45.jpg',
+      role: 'Local Guide · 15 reviews'
     },
     {
-      name: 'Mike R.',
-      text: 'One-stop shop for all my hunting and fishing needs. Highly recommend!',
+      name: 'Nora Bueckert',
+      text: 'Very good selection of goods with very friendly sales people.',
       rating: 5,
-      image: 'https://randomuser.me/api/portraits/men/52.jpg'
+      image: 'https://randomuser.me/api/portraits/women/44.jpg',
+      role: 'Local Guide · 39 reviews'
+    },
+    {
+      name: 'Walter Selke',
+      text: 'Great shop for a small town.',
+      rating: 5,
+      image: 'https://randomuser.me/api/portraits/men/52.jpg',
+      role: 'Local Guide · 72 reviews'
+    },
+    {
+      name: 'Leah Nelson',
+      text: 'Great selection',
+      rating: 5,
+      image: 'https://randomuser.me/api/portraits/women/28.jpg',
+      role: 'Local Guide · 28 reviews'
+    },
+    {
+      name: 'Adam Clarke',
+      text: 'Timberlost Outdoors and Surplus has great outdoor gear, quality clothing, and very helpful staff.',
+      rating: 5,
+      image: 'https://randomuser.me/api/portraits/men/67.jpg',
+      role: 'Customer'
+    },
+    {
+      name: 'Adam Clarke',
+      text: 'Timberlost Outdoors and Surplus offers quality outdoor gear, fair prices, and friendly service every visit.',
+      rating: 5,
+      image: 'https://randomuser.me/api/portraits/men/68.jpg',
+      role: 'Customer'
+    },
+    {
+      name: 'Aaron MacBeth',
+      text: 'We visited Timberlost Outdoors and Surplus store and had a great experience. Excellent selection of outdoor gear and clothing, friendly staff, and quality products at fair prices.',
+      rating: 5,
+      image: 'https://randomuser.me/api/portraits/men/71.jpg',
+      role: 'Customer'
+    },
+    {
+      name: 'Jack Sullivan',
+      text: 'Great outdoor store with friendly service.',
+      rating: 5,
+      image: 'https://randomuser.me/api/portraits/men/75.jpg',
+      role: 'Customer'
+    },
+    {
+      name: 'Henry Lawson',
+      text: 'Great selection of outdoor gear, clothing, and friendly, helpful customer service.',
+      rating: 5,
+      image: 'https://randomuser.me/api/portraits/men/78.jpg',
+      role: 'Customer'
+    },
+    {
+      name: 'Laurent Moreau',
+      text: 'Excellent people and very friendly service. Great to have them in our community. I always support and shop here. Quality stock, from hunting gear to clothing and other essentials.',
+      rating: 5,
+      image: 'https://randomuser.me/api/portraits/men/82.jpg',
+      role: 'Customer'
+    },
+    {
+      name: 'Xavier Bouchard',
+      text: 'Timberlost Outdoors and Surplus offers great quality clothing and a wide range of outdoor products. Friendly staff, fair prices, and well-stocked inventory make it a must-visit store in Big River.',
+      rating: 5,
+      image: 'https://randomuser.me/api/portraits/men/85.jpg',
+      role: 'Customer'
+    },
+    {
+      name: 'James Milne',
+      text: 'Excellent service and great products!',
+      rating: 5,
+      image: 'https://randomuser.me/api/portraits/men/88.jpg',
+      role: 'Local Guide · 58 reviews'
+    },
+    {
+      name: 'Brittany Saunders',
+      text: 'Amazing store with everything you need for outdoor adventures!',
+      rating: 5,
+      image: 'https://randomuser.me/api/portraits/women/65.jpg',
+      role: 'Local Guide · 107 reviews'
+    },
+    {
+      name: 'Ben Miller',
+      text: 'Highly recommend this place!',
+      rating: 5,
+      image: 'https://randomuser.me/api/portraits/men/91.jpg',
+      role: 'Customer'
+    },
+    {
+      name: 'Pierre Leblanc',
+      text: 'Great experience shopping here!',
+      rating: 5,
+      image: 'https://randomuser.me/api/portraits/men/94.jpg',
+      role: 'Local Guide · 35 reviews'
     }
   ];
 
@@ -276,12 +375,72 @@ const Home = () => {
             <p className="text-xl md:text-2xl text-amber-800 font-normal">Trusted by Timberlost Outdoors and Surplus Store</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className={`scale-in stagger-${index + 1}`}>
-                <TestimonialCard {...testimonial} />
-              </div>
-            ))}
+          {/* Swiper Carousel */}
+          <div className="relative px-16">
+            <Swiper
+              modules={[Pagination, Navigation, Autoplay]}
+              spaceBetween={12}
+              slidesPerView={1}
+              navigation={{
+                nextEl: '.swiper-button-next-custom',
+                prevEl: '.swiper-button-prev-custom',
+              }}
+              pagination={{
+                type: 'progressbar',
+                el: '.swiper-pagination-custom',
+              }}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 12,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 12,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 12,
+                },
+                1280: {
+                  slidesPerView: 3,
+                  spaceBetween: 12,
+                },
+                1920: {
+                  slidesPerView: 3,
+                  spaceBetween: 12,
+                },
+              }}
+              className="testimonials-swiper pb-16"
+            >
+              {testimonials.map((testimonial, index) => (
+                <SwiperSlide key={index} className="h-auto">
+                  <div className="h-full">
+                    <TestimonialCard {...testimonial} />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            
+            {/* Custom Navigation Arrows */}
+            <div className="swiper-button-prev-custom">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </div>
+            <div className="swiper-button-next-custom">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+            
+            {/* Custom Progress Bar */}
+            <div className="swiper-pagination-custom mt-8 mx-auto" style={{ maxWidth: '600px', height: '4px', background: '#FDE68A', borderRadius: '10px', position: 'relative' }}></div>
           </div>
         </div>
       </section>
