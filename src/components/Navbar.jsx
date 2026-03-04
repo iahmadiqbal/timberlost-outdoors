@@ -115,12 +115,20 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu - Simple Clean Design */}
-      <div className={`fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-out z-50 ${
+      {/* Overlay */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/80 backdrop-blur-md z-40"
+          onClick={() => setIsOpen(false)}
+        ></div>
+      )}
+
+      {/* Mobile Menu - Full Screen Overlay Style */}
+      <div className={`fixed inset-0 bg-white transform transition-transform duration-300 ease-out z-50 ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
         {/* Header */}
-        <div className="flex justify-between items-center p-6 border-b border-gray-200">
+        <div className="flex justify-between items-center p-6 border-b border-gray-200 bg-white">
           <div className="flex items-center space-x-3">
             <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg overflow-hidden">
               <img src={logo} alt="Timberlost Outdoors" className="w-full h-full object-cover" />
@@ -141,7 +149,7 @@ const Navbar = () => {
         </div>
 
         {/* Menu Items */}
-        <div className="px-6 py-8 space-y-3">
+        <div className="px-6 py-8 space-y-3 bg-white">
           {navLinks.map((link, index) => (
             <Link
               key={link.path}
@@ -159,7 +167,7 @@ const Navbar = () => {
         </div>
 
         {/* Visit Store Button */}
-        <div className="px-6 py-4">
+        <div className="px-6 py-4 bg-white">
           <a
             href="#store"
             onClick={() => setIsOpen(false)}
@@ -172,14 +180,6 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-
-      {/* Overlay */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40"
-          onClick={() => setIsOpen(false)}
-        ></div>
-      )}
     </nav>
   );
 };
