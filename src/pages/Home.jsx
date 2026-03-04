@@ -3,7 +3,7 @@ import ServiceCard from '../components/ServiceCard';
 import TestimonialCard from '../components/TestimonialCard';
 import { FaCheckCircle, FaTag, FaUsers, FaDirections, FaShoppingBag, FaMapMarkedAlt, FaCampground, FaDollarSign, FaUserFriends } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -376,10 +376,10 @@ const Home = () => {
           </div>
           
           {/* Swiper Carousel */}
-          <div className="relative px-16">
+          <div className="relative max-w-[1200px] mx-auto px-20">
             <Swiper
-              modules={[Pagination, Navigation, Autoplay]}
-              spaceBetween={12}
+              modules={[Pagination, Navigation]}
+              spaceBetween={8}
               slidesPerView={1}
               navigation={{
                 nextEl: '.swiper-button-next-custom',
@@ -389,31 +389,26 @@ const Home = () => {
                 type: 'progressbar',
                 el: '.swiper-pagination-custom',
               }}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }}
               breakpoints={{
                 640: {
                   slidesPerView: 1,
-                  spaceBetween: 12,
+                  spaceBetween: 8,
                 },
                 768: {
                   slidesPerView: 2,
-                  spaceBetween: 12,
+                  spaceBetween: 8,
                 },
                 1024: {
                   slidesPerView: 3,
-                  spaceBetween: 12,
+                  spaceBetween: 8,
                 },
                 1280: {
                   slidesPerView: 3,
-                  spaceBetween: 12,
+                  spaceBetween: 8,
                 },
                 1920: {
                   slidesPerView: 3,
-                  spaceBetween: 12,
+                  spaceBetween: 8,
                 },
               }}
               className="testimonials-swiper pb-16"

@@ -1,7 +1,7 @@
 const TestimonialCard = ({ name, text, rating, image, role }) => {
   return (
-    <div className="card group bg-white hover:shadow-2xl h-full flex flex-col">
-      <div className="p-8 flex flex-col relative overflow-hidden flex-1">
+    <div className="card group bg-white hover:shadow-2xl flex flex-col" style={{ height: '340px', width: '100%' }}>
+      <div className="p-6 flex flex-col relative overflow-hidden h-full">
         {/* Quote Icon Background */}
         <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
           <svg className="w-24 h-24 text-color-primary" fill="currentColor" viewBox="0 0 24 24">
@@ -9,11 +9,11 @@ const TestimonialCard = ({ name, text, rating, image, role }) => {
           </svg>
         </div>
         
-        <div className="flex mb-6 relative z-10">
+        <div className="flex mb-4 relative z-10">
           {[...Array(rating)].map((_, i) => (
             <svg 
               key={i} 
-              className="w-6 h-6 text-color-warning fill-current transform group-hover:scale-125 transition-transform duration-300" 
+              className="w-5 h-5 text-color-warning fill-current transform group-hover:scale-125 transition-transform duration-300" 
               viewBox="0 0 20 20"
               style={{ transitionDelay: `${i * 50}ms` }}
             >
@@ -22,21 +22,23 @@ const TestimonialCard = ({ name, text, rating, image, role }) => {
           ))}
         </div>
         
-        <p className="text-base mb-6 italic leading-relaxed flex-grow relative z-10 font-medium" style={{ color: '#5C4A3A', minHeight: '120px' }}>
-          "{text}"
-        </p>
+        <div className="flex-1 relative z-10 mb-5" style={{ height: '160px', overflow: 'hidden' }}>
+          <p className="text-sm italic leading-relaxed font-medium line-clamp-7" style={{ color: '#5C4A3A' }}>
+            "{text}"
+          </p>
+        </div>
         
         <div className="flex items-center relative z-10 mt-auto">
-          <div className="w-14 h-14 rounded-full overflow-hidden mr-4 transform group-hover:scale-110 transition-transform duration-300 border-4 border-color-primary shadow-lg flex-shrink-0">
+          <div className="w-12 h-12 rounded-full overflow-hidden mr-3 transform group-hover:scale-110 transition-transform duration-300 border-3 border-color-primary shadow-lg flex-shrink-0">
             <img 
               src={image}
               alt={name}
               className="w-full h-full object-cover"
             />
           </div>
-          <div>
-            <p className="font-black text-base" style={{ color: '#2C1810' }}>{name}</p>
-            <p className="text-xs font-semibold" style={{ color: '#8C7A6A' }}>{role || 'Verified Customer'}</p>
+          <div className="flex-1 min-w-0">
+            <p className="font-black text-base truncate" style={{ color: '#2C1810' }}>{name}</p>
+            <p className="text-xs font-semibold truncate" style={{ color: '#8C7A6A' }}>{role || 'Customer'}</p>
           </div>
         </div>
       </div>
