@@ -1,24 +1,50 @@
-import { useState } from 'react';
-import { FaMapMarkerAlt, FaPhone, FaClock, FaFacebook, FaEnvelope, FaPaperPlane } from 'react-icons/fa';
+import { useState } from "react";
+import {
+  FaMapMarkerAlt,
+  FaPhone,
+  FaClock,
+  FaFacebook,
+  FaEnvelope,
+  FaPaperPlane,
+} from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+
+    try {
+      const response = await fetch("http://localhost:5001/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(data.message);
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -28,9 +54,9 @@ const Contact = () => {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/65 to-black/80 z-10"></div>
-          <img 
-            src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920" 
-            alt="Contact us" 
+          <img
+            src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Contact us"
             className="w-full h-full object-cover"
             loading="eager"
           />
@@ -38,10 +64,16 @@ const Contact = () => {
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="text-center">
             <div className="inline-block mb-6 px-10 py-4 bg-white/95 backdrop-blur-md rounded-full border-2 border-amber-500 shadow-xl">
-              <span className="text-base font-bold tracking-wider text-amber-700 uppercase">Contact Us</span>
+              <span className="text-base font-bold tracking-wider text-amber-700 uppercase">
+                Contact Us
+              </span>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 !text-white drop-shadow-2xl">Get In Touch</h1>
-            <p className="text-2xl md:text-3xl !text-white drop-shadow-lg max-w-3xl mx-auto font-medium">Visit our store or send us a message</p>
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 !text-white drop-shadow-2xl">
+              Get In Touch
+            </h1>
+            <p className="text-2xl md:text-3xl !text-white drop-shadow-lg max-w-3xl mx-auto font-medium">
+              Visit our store or send us a message
+            </p>
           </div>
         </div>
       </section>
@@ -52,8 +84,10 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-amber-900 mb-8">Contact Information</h2>
-              
+              <h2 className="text-2xl md:text-3xl font-bold text-amber-900 mb-8">
+                Contact Information
+              </h2>
+
               <div className="space-y-6">
                 <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-amber-200 hover:border-amber-500 transition-all duration-300 hover:-translate-y-1 group">
                   <div className="flex items-start">
@@ -61,9 +95,15 @@ const Contact = () => {
                       <FaMapMarkerAlt className="text-xl text-amber-600" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-amber-900 mb-2 text-lg">Location</h3>
-                      <p className="text-gray-700 font-medium text-sm">105 Main St, Big River</p>
-                      <p className="text-gray-700 font-medium text-sm">SK S0J 0E0, Canada</p>
+                      <h3 className="font-bold text-amber-900 mb-2 text-lg">
+                        Location
+                      </h3>
+                      <p className="text-gray-700 font-medium text-sm">
+                        105 Main St, Big River
+                      </p>
+                      <p className="text-gray-700 font-medium text-sm">
+                        SK S0J 0E0, Canada
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -74,11 +114,18 @@ const Contact = () => {
                       <FaPhone className="text-xl text-amber-600" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-amber-900 mb-2 text-lg">Phone</h3>
-                      <a href="tel:+13064692437" className="text-gray-700 hover:text-amber-700 font-medium text-base transition-colors">
+                      <h3 className="font-bold text-amber-900 mb-2 text-lg">
+                        Phone
+                      </h3>
+                      <a
+                        href="tel:+13064692437"
+                        className="text-gray-700 hover:text-amber-700 font-medium text-base transition-colors"
+                      >
                         +1 306-469-2437
                       </a>
-                      <p className="text-xs text-gray-600 mt-1">Call us for product inquiries</p>
+                      <p className="text-xs text-gray-600 mt-1">
+                        Call us for product inquiries
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -89,8 +136,13 @@ const Contact = () => {
                       <FaEnvelope className="text-xl text-amber-600" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-amber-900 mb-2 text-lg">Email</h3>
-                      <a href="mailto:info@timberlostoutdoorsandsurplus.com" className="text-gray-700 hover:text-amber-700 font-medium text-sm transition-colors break-all">
+                      <h3 className="font-bold text-amber-900 mb-2 text-lg">
+                        Email
+                      </h3>
+                      <a
+                        href="mailto:info@timberlostoutdoorsandsurplus.com"
+                        className="text-gray-700 hover:text-amber-700 font-medium text-sm transition-colors break-all"
+                      >
                         info@timberlostoutdoorsandsurplus.com
                       </a>
                     </div>
@@ -103,9 +155,15 @@ const Contact = () => {
                       <FaClock className="text-xl text-amber-600" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-amber-900 mb-2 text-lg">Store Hours</h3>
-                      <p className="text-gray-700 font-medium text-sm">Visit us for current hours</p>
-                      <p className="text-xs text-gray-600 mt-1">We're here to serve you</p>
+                      <h3 className="font-bold text-amber-900 mb-2 text-lg">
+                        Store Hours
+                      </h3>
+                      <p className="text-gray-700 font-medium text-sm">
+                        Visit us for current hours
+                      </p>
+                      <p className="text-xs text-gray-600 mt-1">
+                        We're here to serve you
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -116,11 +174,20 @@ const Contact = () => {
                       <FaFacebook className="text-xl text-amber-600" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-amber-900 mb-2 text-lg">Social Media</h3>
-                      <a href="https://www.facebook.com/TimberlostOutdoors/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-amber-700 font-medium text-sm transition-colors">
+                      <h3 className="font-bold text-amber-900 mb-2 text-lg">
+                        Social Media
+                      </h3>
+                      <a
+                        href="https://www.facebook.com/TimberlostOutdoors/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-700 hover:text-amber-700 font-medium text-sm transition-colors"
+                      >
                         Follow us on Facebook
                       </a>
-                      <p className="text-xs text-gray-600 mt-1">Stay updated with latest products</p>
+                      <p className="text-xs text-gray-600 mt-1">
+                        Stay updated with latest products
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -131,10 +198,15 @@ const Contact = () => {
             <div>
               <div className="bg-white rounded-3xl shadow-2xl border-4 border-amber-500 overflow-hidden">
                 <div className="p-8">
-                  <h2 className="text-2xl md:text-3xl font-bold text-amber-900 mb-6">Send Us a Message</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold text-amber-900 mb-6">
+                    Send Us a Message
+                  </h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-bold text-amber-900 mb-2">
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-bold text-amber-900 mb-2"
+                      >
                         Name *
                       </label>
                       <input
@@ -150,7 +222,10 @@ const Contact = () => {
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="block text-sm font-bold text-amber-900 mb-2">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-bold text-amber-900 mb-2"
+                      >
                         Email *
                       </label>
                       <input
@@ -166,7 +241,10 @@ const Contact = () => {
                     </div>
 
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-bold text-amber-900 mb-2">
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-bold text-amber-900 mb-2"
+                      >
                         Phone
                       </label>
                       <input
@@ -181,7 +259,10 @@ const Contact = () => {
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-bold text-amber-900 mb-2">
+                      <label
+                        htmlFor="message"
+                        className="block text-sm font-bold text-amber-900 mb-2"
+                      >
                         Message *
                       </label>
                       <textarea
@@ -196,7 +277,10 @@ const Contact = () => {
                       ></textarea>
                     </div>
 
-                    <button type="submit" className="w-full inline-flex items-center justify-center gap-3 bg-white text-amber-700 px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300 border-2 border-amber-500 shadow-lg hover:shadow-2xl hover:bg-amber-50">
+                    <button
+                      type="submit"
+                      className="w-full inline-flex items-center justify-center gap-3 bg-white text-amber-700 px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300 border-2 border-amber-500 shadow-lg hover:shadow-2xl hover:bg-amber-50"
+                    >
                       <FaPaperPlane className="text-xl" />
                       Send Message
                     </button>
@@ -213,13 +297,17 @@ const Contact = () => {
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="inline-block mb-6 px-10 py-4 bg-white rounded-full border-2 border-amber-500 shadow-lg hover:scale-110 hover:shadow-2xl transition-all duration-300 cursor-pointer">
-              <span className="text-base font-bold text-amber-700 uppercase tracking-wider">Find Us</span>
+              <span className="text-base font-bold text-amber-700 uppercase tracking-wider">
+                Find Us
+              </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-6">Visit Our Store</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-6">
+              Visit Our Store
+            </h2>
           </div>
-          <a 
-            href="https://www.facebook.com/TimberlostOutdoors/" 
-            target="_blank" 
+          <a
+            href="https://www.facebook.com/TimberlostOutdoors/"
+            target="_blank"
             rel="noopener noreferrer"
             className="block bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl shadow-xl border-2 border-amber-500 overflow-hidden py-12 px-6 hover:scale-105 transition-transform duration-500 cursor-pointer"
           >
@@ -227,9 +315,15 @@ const Contact = () => {
               <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-3">
                 <FaMapMarkerAlt className="text-2xl text-amber-500" />
               </div>
-              <h3 className="text-lg font-bold text-amber-900 mb-1">105 Main St, Big River</h3>
-              <p className="text-base text-gray-700 font-medium">SK S0J 0E0, Canada</p>
-              <p className="text-sm text-gray-600 mt-2">Click for more information</p>
+              <h3 className="text-lg font-bold text-amber-900 mb-1">
+                105 Main St, Big River
+              </h3>
+              <p className="text-base text-gray-700 font-medium">
+                SK S0J 0E0, Canada
+              </p>
+              <p className="text-sm text-gray-600 mt-2">
+                Click for more information
+              </p>
             </div>
           </a>
         </div>
