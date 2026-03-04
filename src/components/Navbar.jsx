@@ -123,8 +123,8 @@ const Navbar = () => {
         ></div>
       )}
 
-      {/* Mobile Menu - Full Screen Overlay Style */}
-      <div className={`fixed inset-0 bg-white transform transition-transform duration-300 ease-out z-50 ${
+      {/* Mobile Menu - Slide from Right with Left Gap */}
+      <div className={`fixed top-0 right-0 bottom-0 w-[85%] bg-white transform transition-transform duration-300 ease-out z-50 shadow-2xl ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
         {/* Header */}
